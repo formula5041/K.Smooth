@@ -1,0 +1,196 @@
+div.products{
+    width: 80%;
+    margin: 2% auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+div.products div.productsUp{
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+}
+div.products div.productsUp a{
+    width: 100%;
+    cursor: pointer;
+}
+div.products div.productsDown{
+    width: 100%;
+    height: 100%;
+    display:flex;
+    flex-direction: row;
+}
+div.products div.productsDown a{
+    width: 100%;
+    cursor: pointer;
+}
+
+/* img */
+div.twoInOne{
+    background-image: url(../img/photos/products/2in1/2in1banner.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    height: 250px;
+    transition: all 1s;
+}
+div.threeInOne{
+    background-image: url(../img/photos/products/3in1/3in1banner.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    height: 250px;
+    transition: all 1s;
+}
+div.wheely{
+    background-image: url(../img/photos/products/wheely/wheelybanner.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    height: 250px;
+    transition: all 1s;
+}
+div.helmet{
+    background-image: url(../img/photos/products/helmet/helmetbanner.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    height: 250px;
+    transition: all 1s;
+}
+div.fontArea{
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin:5%;
+    width:150px;
+    border-radius: 50px;
+}
+div.fontArea p{
+    margin: 0;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+div.fontArea p:nth-child(1){
+    font-size: 30px;
+}
+div.fontArea p:nth-child(2){
+    padding-bottom: 3%;
+    font-size: 15px;
+}
+
+/* hover */
+div.twoInOne:hover{
+    margin-top: -20px;
+}
+
+div.threeInOne:hover{
+    margin-left: 20px;
+}
+
+div.wheely:hover{
+    margin-left: -20px;
+}
+
+div.helmet:hover{
+    margin-top: 20px;
+}
+
+/* RWD */
+@media (min-width:1400px){
+    div.twoInOne{
+        height: 400px;
+    }
+    div.threeInOne{
+        height: 400px;
+    }
+    div.wheely{
+        height: 400px;
+    }
+    div.helmet{
+        height: 400px;
+    }
+}
+@media (min-width:1200px){
+    div.twoInOne{
+        height: 350px;
+    }
+    div.threeInOne{
+        height: 350px;
+    }
+    div.wheely{
+        height: 350px;
+    }
+    div.helmet{
+        height: 350px;
+    }
+}
+@media (max-width:768px){
+    div.products {
+        max-width: 100%;
+        height: 100%;
+    }
+    div.products div.productsUp{
+        flex-direction: column;
+    }
+    div.products div.productsDown{
+        flex-direction: column;
+    }
+    div.fontArea{
+        display: inline-block;
+        background-color: #ffffff80;
+        margin:5%;
+        width:100px;
+        border-radius: 50px;
+    }
+    div.fontArea p{
+        margin: 0;
+        color: #00000090;
+        text-align: center;
+    }
+    div.fontArea p:nth-child(1){
+        font-size: 20px;
+    }
+    div.fontArea p:nth-child(2){
+        font-size: 14px;
+    }
+    div.twoInOne:hover{
+        margin-top: 0px;
+    }
+    
+    div.threeInOne:hover{
+        margin-left: 0px;
+    }
+    
+    div.wheely:hover{
+        margin-left: 0px;
+    }
+    
+    div.helmet:hover{
+        margin-top: 0px;
+    }
+    /* breadCrumbs */
+    main div.breadCrumbs{
+        width: 80%;
+      }
+}
+
+@media (max-width:576px){
+    div.twoInOne{
+        height: 180px;
+    }
+    div.threeInOne{
+        height: 180px;
+    }
+    div.wheely{
+        height: 180px;
+    }
+    div.helmet{
+        height: 180px;
+    }
+}
+

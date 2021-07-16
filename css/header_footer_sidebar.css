@@ -1,0 +1,453 @@
+/* header */
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header div.logo {
+    background-image: url(../img/logo_700x400.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 80px;
+    height: 80px;
+    margin-left: 20px; /*視情況調整*/
+}
+header div.logo a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+header div.loginIcon{
+    margin-right: 65px; 
+    margin-bottom: 8px;
+    display: flex;
+}
+header div.loginIcon a img{
+    width:25px;
+    margin-right: 8px;
+    cursor: pointer;
+    transition: all .5s;
+}
+header div.loginIcon a img:hover{
+    transform: translateY(-2px);
+}
+/* 購物車有東西才顯示 */
+#pCount {
+    background-color: #E24444;
+    border-radius: 10px;
+    color: white;
+    font-size: 12px;
+    position: absolute;
+    width: 15px;
+    text-align: center;
+    top: 15px;
+    transform: translateX(-100%);
+}
+header div.memberIcon{
+    margin-right: 15px;
+    padding-bottom: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+header div.memberIcon img.iconArea{
+    border-radius: 20px;
+    width: 25px;
+    transition: all .5s;
+    cursor: pointer;
+}
+header div.memberIcon img.iconArea:hover{
+    border-radius: 0px;
+}
+header div.memberIcon span.outArea{
+    font-size: 12px;
+    position: absolute;
+    bottom: 5px;
+    left: -8px;
+    transform: translateY(100%);
+    cursor: pointer;
+    color: #116975;
+    font-weight: bold;
+    transition: all .5s;
+}
+header div.memberIcon span.outArea:hover{
+    color: #E24444;
+    transform: translateY(15px);
+}
+
+/* main */
+main{
+    width: 100%;
+    position: relative;
+}
+/* hamburger_1 */
+main label#hamOver{
+    background-image: url(../img/hamburger.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+    /* 設absolute移動位置 & 設定位點給後層子元素 */
+    position: absolute;
+    top: -70px;
+    right: 1%;
+    opacity: .7;
+    cursor: pointer;
+    z-index: 99;
+}
+/* hamburger_2 */
+main input#checkbox{
+    height: 50px;
+    width: 50px;
+    /* 設absolute移動位置 & 設定位點給後層子元素 */
+    position: absolute;
+    top: 0;
+    right: 100px;
+    z-index: -100;
+    opacity: 0;
+}
+/* nav_content */
+main div.nav_content {
+    position: absolute;
+    top: -101px;
+    right: -240px; /*-220*/
+    min-height: 800px;
+    background-color:#656765;
+    width: 220px;
+    /* 不先設animation-name，利用JS來回調(因為有兩個Name) */
+    animation-duration:.5s;
+    animation-fill-mode:forwards;
+    animation-name: "";
+    z-index: 98;
+    border-radius: 0px 0px 0px 100%;
+}
+
+/* 抓不同方向的動畫效果 */
+@keyframes sideMoveLeft{
+    0% {
+        right:-240px;
+    }
+    100% {
+        right:-1px;
+        
+    }
+}
+@keyframes sideMoveRight{
+    0% {
+        right:-1px;
+    }
+    100% {
+        right:-240px;
+        
+    }
+}
+/* search */
+main div.nav_content input#search{
+    position: absolute;
+    border-radius: 15px;
+    border: 1px solid #656765;
+    outline: none;
+    color: #E24444;
+    height: 35px;
+    width: 135px;
+    margin-top: 40px;
+    margin-left: 20px;
+    padding-left: 10px;
+}
+main div.nav_content input::placeholder{
+    color: #116975;
+    font-weight: bold;
+}
+main div.nav_content label.search {
+    background-image: url(../img/magnifying-glass.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 45px;
+    right: 75px;
+    width: 25px;
+    height: 25px;
+}
+main div.nav_content label.search:hover{
+    transition: all 1s;
+    transform: rotate(360deg);
+    cursor: pointer;
+}
+/* nav_list */
+main div.nav_content div.nav_list{
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main div.nav_content div.nav_list a {
+    margin: 2% auto;
+    width: 80px;
+    padding-left: 25px;
+}
+
+main div.nav_content div.nav_list a p {
+    color: white;
+    font-size: 18px;
+    text-align: start;
+}
+main div.nav_content div.nav_list a p:hover{
+    color: #E24444;
+}
+
+/* every p */
+main div.nav_content div.nav_list a p::before{
+    content: "";
+    position: absolute;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    left: 60px
+}
+main div.nav_content div.nav_list a.news p::before{
+    background-image: url(../img/news_white.png);
+}
+main div.nav_content div.nav_list a.about p::before{
+    background-image: url(../img/company.png);
+}
+main div.nav_content div.nav_list a.products p::before{
+    background-image: url(../img/products.png);
+}
+main div.nav_content div.nav_list a.contact p::before{
+    background-image: url(../img/speech-bubble_white.png);
+}
+main div.nav_content div.nav_list a.account p::before{
+    background-image: url(../img/user_white.png);
+}
+main div.nav_content div.nav_list a.play p::before{
+    background-image: url(../img/game-controller.svg);
+}
+
+/* a:hover(變色) */
+main div.nav_content div.nav_list a.account p:hover {
+    color: #E24444;
+}
+
+/* 以下開始footer */
+footer{
+    position: relative;
+}
+footer::before{
+    content: "|";
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer_nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* a 的間距 */
+.footer_nav a{
+    margin: 0 30px;
+    color: #116975;
+    transition: all 1s;
+}
+/* nav hover 變粗 */
+.footer_nav a:hover p {
+    color: #E24444;
+    transform: translateY(-2px);
+}
+.footer_social{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer_social a{
+    margin: 5px 10px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+    transition: all 1s;
+}
+
+/* a logo的間距 */
+.footer_social a:nth-child(1){
+    background-image: url(../img/icon/instagram.png);
+}
+.footer_social a:nth-child(2){
+    background-image: url(../img/icon/facebook.png);
+}
+.footer_social a:nth-child(3){
+    background-image: url(../img/icon/google.png);
+}
+.footer_social a:nth-child(4){
+    background-image: url(../img/icon/twitter.png);
+}
+/* logo hover變大 */
+.footer_social a:hover{
+    transform: translateY(-5px);
+}
+
+/* signup調整 */
+.footer_signup{
+    margin: 20px;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+/* sign欄位 */
+.footer_signup form button{
+    width: 250px;
+    height: 30px;
+    background-color: #116975;
+    color: white;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+    border:none;
+    font-weight: bold;
+    transition: all 1s;
+}
+.footer_signup form button:hover{
+    background-color: #E24444;
+    transform: translateY(-2px);
+}
+
+.footer_allRights{
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.footer_allRights p:last-child{
+    transform: translateY(-100%);
+}
+.footer_allRights p.tibame{
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+    font-size: 5px;
+    color: #65676570;
+}
+p#ttttt::after{
+    content: "";
+    background-image: url(../img/kangaroo.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0;
+    right: 5%;
+    text-align: center;
+    cursor: pointer;
+    animation: toTopSpring 2s infinite;
+}
+@keyframes toTopSpring{
+    0%{
+        /* background-image: url(../img/kangaroo.svg); */
+        transform: translateY(0px);
+    }
+    50%{
+        /* background-image: url(../img/kangaroo2.svg); */
+        transform: translateY(-5px);
+    }
+}
+@media(max-width:976px){
+    p#ttttt::after{
+        width: 45px;
+        height: 45px;
+        right: 2%;
+    }
+}
+@media(max-width:768px){
+    /* footer RWD */
+    .footer_signup form button{
+        width: 120px;
+        height: 20px;
+        font-size: 12px;
+    }
+    .footer_nav{
+        display: none;
+    }
+    p#ttttt::after{
+        width: 40px;
+        height: 40px;
+        top: 50px;
+    }
+    .footer_social a{
+        width: 30px;
+        height: 30px;
+    }
+    .footer_signup{
+        margin-top: 8px;
+    }
+}
+@media(max-width:400px){
+    header div.logo {
+        width: 60px;
+        height: 60px;
+        margin-left: 10px; /*視情況調整*/
+    }
+    header div.logo a{
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    header div.loginIcon{
+        margin-right: 50px; 
+        margin-bottom: 0px;
+    }
+    header div.loginIcon a img{
+        width:20px;
+        margin-right: 6px;
+    }
+    /* 購物車有東西才顯示 */
+    #pCount {
+        background-color: #e24444ea;
+        border-radius: 4px;
+        font-size: 10px;
+        width: 10px;
+        top: 10px;
+    }
+    header div.memberIcon{
+        margin-right: 15px;
+        padding-bottom: 8px;
+    }
+    header div.memberIcon img.iconArea{
+        border-radius: 20px;
+        width: 20px;
+    }
+    header div.memberIcon span.outArea{
+        font-size: 8px;
+        bottom: 5px;
+        left: -8px;
+    }
+    main label#hamOver{
+        height: 30px;
+        width: 30px;
+        margin: 10px;
+        /* 設absolute移動位置 & 設定位點給後層子元素 */
+        position: absolute;
+        top: -60px;
+        right: 1%;
+        opacity: .7;
+        cursor: pointer;
+        z-index: 99;
+    }
+}

@@ -1,0 +1,211 @@
+div.productsContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 2% auto;
+    width: 80%;
+}
+/* left */
+div.productsDetails{
+    display: flex;
+    align-items: center;
+}
+div.productsDetails div.productsIntro{
+    width: 60%;
+}
+div.productsDetails div.productsIntro h1{
+    margin: 0;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #116975;
+    font-size: 36px;
+}
+div.productsDetails div.productsIntro p{
+    font-size: 24px;
+    margin: 0;
+    padding-right: 20px;
+}
+/* right */
+div.productsDetails div.productsImg{
+    width: 40%;
+}
+div.productsDetails div.productsImg img{
+    width: 100%;
+}
+/* productsItems */
+div.productsItems{
+    display: flex;
+    flex-direction: column;
+    margin: 2% 0;
+    width: 100%;
+}
+div.productsItems div.row{
+    display: flex;
+    justify-content: space-between;
+}
+div.productsItemsDetail a{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all .5s;
+}
+div.productsItemsDetail a:hover {
+    transform: translateY(-5px);
+}
+div.productsItemsDetail a img {
+    width: 70%;
+    justify-self: center;
+}
+div.productsItemsDetail a h3{
+    color: #116975;
+    font-weight: bold;
+    font-size: 24px;
+    margin: 0;
+    align-self: flex-start;
+}
+div.productsItemsDetail a p{
+    color: #E24444;
+    font-weight: bold;
+    font-size: 18px;
+    align-self: flex-start;
+}
+@media (max-width:1200px){
+    div.productsDetails div.productsImg{
+        width: 45%;
+    }
+    div.productsDetails div.productsIntro{
+        width: 55%;
+    }
+    div.productsDetails div.productsIntro h1{
+        font-size: 34px;
+    }
+    div.productsDetails div.productsIntro p{
+        font-size: 22px;
+    }
+}
+@media (max-width:1000px){
+    div.productsDetails div.productsImg{
+        width: 50%;
+    }
+    div.productsDetails div.productsIntro{
+        width: 50%;
+    }
+    div.productsDetails div.productsIntro h1{
+        margin: 0;
+        margin-bottom: 10px;
+        font-size: 30px;
+    }
+    div.productsDetails div.productsIntro p{
+        font-size: 20px;
+        margin: 0;
+        padding-right: 10px;
+    }
+    /*  */
+    div.productsItemsDetail a h3{
+        font-size: 20px;
+    }
+    div.productsItemsDetail a p{
+        font-size: 16px;
+    }
+}
+@media (max-width:850px){
+    div.productsDetails div.productsIntro h1{
+        font-size: 28px;
+    }
+    div.productsDetails div.productsIntro p{
+        font-size: 18px;
+    }
+}
+@media (max-width:768px) {
+    div.productsContainer {
+        width: 100%;
+    }
+    div.productsDetails{
+        flex-direction: column-reverse;
+    }
+    div.productsDetails div.productsImg{
+        width: 100%;
+    }
+    div.productsDetails div.productsImg a img{
+        width: 100%;
+    }
+    div.productsDetails div.productsIntro {
+        width: 100%;
+        padding: 3%;
+    }
+    /*  */
+    div.productsItems div.row{
+        flex-direction: column;
+        width: 100%;
+    }
+    div.productsItemsDetail{
+        border-top: 1px dashed #116975;
+    }
+    div.productsItemsDetail:last-child{
+        border-bottom: 1px dashed #116975;
+    }
+    div.productsItemsDetail a{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    div.productsItemsDetail a img {
+        width: 60%;
+    }
+    div.productsItemsDetail a h3{
+        font-size: 30px;
+        padding: 0 3%;
+    }
+    div.productsItemsDetail a p{
+        font-size: 22px;
+        padding: 0 3%;
+    }
+}
+@media (max-width:576px){
+    div.productsDetails div.productsIntro h1{
+        font-size: 28px;
+    }
+    div.productsDetails div.productsIntro p{
+        font-size: 18px;
+    }
+    div.productsItemsDetail a h3{
+        font-size: 28px;
+        padding: 0 3%;
+    }
+    div.productsItemsDetail a p{
+        font-size: 20px;
+        padding: 0 3%;
+    }
+}
+@media (max-width:450px){
+    div.productsDetails div.productsIntro h1{
+        font-size: 26px;
+    }
+    div.productsDetails div.productsIntro p{
+        font-size: 16px;
+    }
+    div.productsItemsDetail a h3{
+        font-size: 24px;
+        padding: 0 3%;
+    }
+    div.productsItemsDetail a p{
+        font-size: 18px;
+        padding: 0 3%;
+    }
+}
+@media (max-width:360px){
+    div.productsDetails div.productsIntro h1{
+        font-size: 24px;
+    }
+    div.productsDetails div.productsIntro p{
+        font-size: 14px;
+    }
+    div.productsItemsDetail a h3{
+        font-size: 22px;
+        padding: 0 3%;
+    }
+    div.productsItemsDetail a p{
+        font-size: 16px;
+        padding: 0 3%;
+    }
+}

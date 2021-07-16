@@ -1,0 +1,90 @@
+/* pageBreak微調 */
+div.pageBreak{
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+div.pageBreak a {
+    display: inline-block;
+    width: 70px;
+    text-align: center;
+    color: #116975;
+    margin: 2%;
+}
+
+/* main */
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+div.papaerContainer{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+div.papaerContainer img{
+    margin-top: 10px;
+    width: 60%;
+}
+div.papaerContainer h2{
+    margin-left: 0;
+}
+div.papaerContainer div.paperInfo{
+    display: flex;
+    width: 70%;
+    justify-content: space-evenly;
+}
+div.papaerContainer div.paperInfo div{
+    color: #656765;
+}
+div.papaerContainer div.paperInfo div span {
+    vertical-align: middle;
+    margin: 0 3px;
+}
+div.papaerContainer div.paperInfo div img {
+    width: 15px;
+    vertical-align: middle;
+    margin: 0;
+}
+div.papaerContainer div.paperInfo div img.socialIcon{
+    cursor: pointer;
+}
+
+/* last and next  */
+div.papaerText p::selection{
+    background: #E24444;
+    color: white;
+}
+div.papaerText{
+    padding: 0 20%;
+    margin: 2% auto;
+}
+
+
+
+@media (max-width:768px) {
+    div.papaerContainer{
+        width: 100%;
+    }
+    div.papaerContainer img{
+        width: 100%;
+    }
+    div.papaerContainer h2{
+        font-size: 18px;
+    }
+    div.papaerContainer div.paperDate{
+        font-size: 12px;
+    }
+    div.papaerContainer div.papaerText{
+        width: 100%;
+        padding: 0 10%;
+    }
+    div.papaerContainer div.papaerText p{
+        width: 100%;
+    }
+    div.papaerContainer div.paperInfo{
+        width: 100%;
+        flex-wrap: wrap;
+    }
+}

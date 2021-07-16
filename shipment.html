@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipment</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/header_footer_sidebar.css">
+    <link rel="stylesheet" href="./css/shipment.css">
+</head>
+<body id="body">
+    <div class="container">
+        <header>
+            <div class="logo"><a href="./index.html"></a></div>
+            <div class="loginIcon">
+                <a href="./signin_up.html"><img src="./img/login.svg" id="carts"></a>
+                <a href="./account.html"><img src="./img/cart.svg" id="logs"></a>
+            </div>
+        </header>
+        <main>
+            <!-- hamburger -->
+            <label for="checkbox" id="hamOver"></label>
+            <input type="checkbox" id="checkbox">
+            <!-- nav -->
+            <div class="nav_content" id="nav_contents">
+                <!-- social -->
+                <a href="#"><div class="ig"></div></a>
+                <a href="#"><div class="twitter"></div></a>
+                <!-- search -->
+                <input type="text" placeholder=" Searching..." id="search">
+                <label for="search" class="search"></label>
+                <!-- list -->
+                <div class="nav_list">
+                    <a href="./news.html" class="news"><p>News</p></a>
+                    <a href="./about.html" class="about"><p>About</p></a>
+                    <a href="./products.html" class="products"><p>Products</p></a>
+                    <a href="./contact.html" class="contact"><p>Contact</p></a>
+                    <a href="./games.html" class="play"><p>Games</p></a>
+                    <a href="./account.html" class="account"><p>Account</p></a>
+                </div>
+            </div>
+            <!-- breadCrumbs -->
+            <div class="breadCrumbs">
+                <a href="./index.html" class="homeIcon"></a>
+                <a href="./account.html">Account</a>
+                <a>Shipping</a>
+            </div>
+            <!-- account -->
+            <div class="accountContainer">
+                <table class="cart" id="cart">
+                    <tr>
+                        <th></th>
+                        <th>ITEM NAME</th>
+                        <th>QUANTITY</th>
+                        <th>PRICE</th>
+                        <th>SUM</th>
+                    </tr>
+                    <tr id="insertPoint">
+                        <td colspan="3"></td>
+                        <td>Total:</td>
+                        <td>$<span id="totalPrice"></span></td>
+                        <td></td>
+                    </tr>
+                </table>
+                <form action="./payment.html" method="GET">
+                    <p class="shipTitle">Choose your delivery methods</p>
+                    <div class="shipMethodsContainer">
+                        <div class="shipMethods">
+                            <div class="methods">
+                                <input type="radio" name="shipping" id="direcShipping" required>
+                                <label for="direcShipping" class="directShipping">Direct shipping</label>
+                            </div>
+                            <div class="dolar">
+                                <p>$100</p>
+                            </div>
+                        </div>
+                        <div class="directShipping">
+                            <div class="direcrLeft">
+                                <label for="firstName">Full Name</label>
+                                <input type="text" name="shipFirstName" class="directInfo" placeholder="Full Name" id="firstName">
+                                <label for="email">E-mail</label>
+                                <input type="email" name="shipEmail" class="directInfo" placeholder="E-mail" id="email">
+                                <label for="telephone">Telephone</label>
+                                <input type="text" name="shipPhone" class="directInfo" placeholder="Telephone" id="telephone" maxlength="10">
+                                <label for="address">Address</label>
+                                <textarea name="shipAddress" class="directInfo" placeholder="Address" id="address"></textarea>
+                            </div>
+                            <div class="direcrRight">
+                                <img src="./img/shipping/fast.png" alt="img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shipMethodsContainer">
+                        <div class="shipMethods">
+                            <div class="methods">
+                                <input type="radio" name="shipping" id="drapShipping">
+                                <label for="drapShipping">Drap shipping</label>
+                            </div>
+                            <div class="dolar">
+                                <p>$60</p>
+                            </div>
+                        </div>
+                        <div class="storeInfo">
+                            <div class="storeLeft">
+                                <div class="seven">
+                                    <input type="radio" name="store" class="storeName" id="seven" >
+                                    <label for="seven">7-11</label>
+                                    <a href="https://emap.pcsc.com.tw/#" target="_blank" class="searchStore">*Search Store</a>
+                                </div>
+                                <input type="text" name="sevenNameInput" class="storeName" placeholder="Input Store Name">
+                                <div class="family">
+                                    <input type="radio" name="store" class="storeName" id="famliy">
+                                    <label for="famliy">Family</label>
+                                    <a href="https://www.family.com.tw/marketing/inquiry.aspx" target="_blank" class="searchStore">*Search Store</a>
+                                </div>
+                                <input type="text" name="fmailyNameInput" class="storeName" placeholder="Input Store Name">
+                                <div class="hilefe">
+                                    <input type="radio" name="store" class="storeName" id="hiLife">
+                                    <label for="hiLife">Hi-Life</label> 
+                                    <a href="https://www.hilife.com.tw/storeInquiry_street.aspx" target="_blank" class="searchStore">*Search Store</a>
+                                </div>
+                                <input type="text" name="hiLifeNameInput" class="storeName" placeholder="Input Store Name">
+                            </div>
+                            <div class="storeRight">
+                                <img src="./img/shipping/store.png" alt="img">
+                            </div>
+                        </div>
+                    </div>
+                    <table class="shipTable" id="shipTable">
+                        <tr>
+                            <td>Subtotal:</td>
+                            <td>$<span id="subTotal"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Shipping:</td>
+                            <td>$<span id="resultShipping">0</span></td>
+                        </tr>
+                        <tr>
+                            <td><button type="button" style="width: 60px; height: 20px;" id="couponClick">Check it</button></td>
+                            <td><input type="text" style="width: 60px;" placeholder="Coupon" id="enterCoupon"></td>
+                        </tr>
+                        <tr>
+                            <td>Total:</td>
+                            <td>$<span id="lasrResultTotal">0</span></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><button type="submit" id="submitA">Confirm</button></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </main>
+        <footer>
+            <div class="footer_nav">
+                <a href="./news.html"><p>News</p></a>
+                <a href="./about.html"><p>About</p></a>
+                <a href="./products.html"><p>Products</p></a>
+                <a href="./contact.html"><p>Contact</p></a>
+                <a href="./games.html"><p>Games</p></a>
+                <a href="./account.html"><p>Account</p></a>
+            </div>
+            <div class="footer_social">
+                <a href="#"><p></p></a>
+                <a href="#"><p></p></a>
+                <a href="#"><p></p></a>
+                <a href="#"><p></p></a>
+            </div>
+            <div class="footer_signup">
+                <form action="#" method="GET">
+                    <button type="button"><a href="./signin_up.html" style="color:white">SIGN IN</a></button>
+                </form>
+            </div>
+            <div class="footer_allRights">
+                <p id="ttttt"></p>
+                <p>K.Smooth® 2021 All Right reserved</p>
+            </div>
+        </footer>
+    </div>
+    <script src="./js/sidebar.js"></script>
+    <script src="./js/shipment.js"></script>
+    <script src="./js/scrolltotop.js"></script>
+    <script src="./js/useraccount.js"></script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/header_footer_sidebar.css">
+    <link rel="stylesheet" href="./css/payment.css">
+  </head>
+
+  <body id="body">
+    <div class="container" id="container">
+      <header>
+        <div class="logo"><a href="./index.html"></a></div>
+        <div class="loginIcon">
+          <a href="./signin_up.html"><img src="./img/login.svg" id="carts"></a>
+          <a href="./account.html"><img src="./img/cart.svg" id="logs"></a>
+        </div>
+      </header>
+      <main>
+        <!-- hamburger -->
+        <label for="checkbox" id="hamOver"></label>
+        <input type="checkbox" id="checkbox">
+        <!-- nav -->
+        <div class="nav_content" id="nav_contents">
+          <!-- social -->
+          <a href="#"><div class="ig"></div></a>
+          <a href="#"><div class="twitter"></div></a>
+          <!-- search -->
+          <input type="text" placeholder=" Searching..." id="search">
+          <label for="search" class="search"></label>
+          <!-- list -->
+          <div class="nav_list">
+            <a href="./news.html" class="news">
+              <p>News</p>
+            </a>
+            <a href="./about.html" class="about">
+              <p>About</p>
+            </a>
+            <a href="./products.html" class="products">
+              <p>Products</p>
+            </a>
+            <a href="./contact.html" class="contact">
+              <p>Contact</p>
+            </a>
+            <a href="./games.html" class="play"><p>Games</p></a>
+            <a href="./account.html" class="account">
+              <p>Account</p>
+            </a>
+          </div>
+        </div>
+        <!-- breadCrumbs -->
+        <div class="breadCrumbs">
+          <a href="./index.html" class="homeIcon"></a>
+          <a href="./account.html">Account</a>
+          <a href="./shipment.html">Shipping</a>
+          <a>Payment</a>
+        </div>
+        <!-- account -->
+        <div class="accountContainer">
+          <table class="cart" id="cart">
+            <tr>
+                <th></th>
+                <th>ITEM NAME</th>
+                <th>QUANTITY</th>
+                <th>PRICE</th>
+                <th>SUM</th>
+            </tr>
+            <tr id="insertPoint">
+                <td colspan="3"></td>
+                <td id="shipStyle">Shipping:</td>
+                <td id="shipdolarStyle">$<span id="resultShipping">100</span></td>
+            </tr>
+            <tr>
+              <td colspan="3"></td>
+              <td>Total:</td>
+              <td class="lastTotal">$<span id="lastResultTotal"></span></td>
+            </tr>
+        </table>
+          <form action="" method="" class="formPayment" id="formPayment">
+            <div class="left">
+              <h1>Process Order</h1>
+              <h3>Select a payment method</h3>
+              <!-- caeditCard -->
+              <input type="radio" name="creditCard" id="visa" required>
+              <label for="visa" class="labelVisa"></label>
+              <input type="radio" name="creditCard" id="master">
+              <label for="master" class="labelMaster"></label><br>
+              <!-- cardNumber -->
+              <label for="cardNumber" class="labelCardNumber">Card Number*:</label>
+              <input type="text" class="cardNumber" name="cardNumber" id="cardNumber" maxlength="16" required><br>
+              <label>CN:</label>
+              <input type="text" id="userNumber" disabled><br>
+              <!-- expiryDate -->
+              <label for="expiryDate" class="labelExpiryDate">Expiry Date*:</label>
+              <input type="date" class="expiryDate" name="expiryDate" id="expiryDate" required><br>
+              <!-- securityCode  -->
+              <label for="securityCode" class="labelSecurityCode">Security Code*:</label>
+              <input type="text" class="securityCode" name="securityCode" id="securityCode" maxlength="3" required><br>
+              <!-- checkboxAccept  -->
+              <div>
+                <input type="checkbox" name="checkboxAccept" id="checkboxAccept" required>
+                <label for="checkboxAccept" class="checkBoxLabel">I accept the terms of purchase</label>
+                <button type="submit" id="pay">PAY</button>
+              </div>
+            </div>
+            <div class="right" id="failPay">
+              <div class="notice">
+                <h2>Please check your payment details again!</h2>
+                <p>If you click the "PAY" button, we'll be ship immediately.</p>
+              </div>
+            </div>
+          </form>
+        </div>
+      </main>
+      <footer>
+        <div class="footer_nav">
+          <a href="./news.html">
+            <p>News</p>
+          </a>
+          <a href="./about.html">
+            <p>About</p>
+          </a>
+          <a href="./products.html">
+            <p>Products</p>
+          </a>
+          <a href="./contact.html">
+            <p>Contact</p>
+          </a>
+          <a href="./games.html"><p>Games</p></a>
+          <a href="./account.html"><p>Account</p></a>
+        </div>
+        <div class="footer_social">
+          <a href="#">
+            <p></p>
+          </a>
+          <a href="#">
+            <p></p>
+          </a>
+          <a href="#">
+            <p></p>
+          </a>
+          <a href="#">
+            <p></p>
+          </a>
+        </div>
+        <div class="footer_signup">
+          <form action="#" method="GET">
+            <button type="button"><a href="./signin_up.html" style="color:white">SIGN IN</a></button>
+          </form>
+        </div>
+        <div class="footer_allRights">
+          <p id="ttttt"></p>
+          <p>K.Smooth® 2021 All Right reserved</p>
+        </div>
+      </footer>
+    </div>
+    <script src="./js/sidebar.js"></script>
+    <script src="./js/payment.js"></script>
+    <script src="./js/scrolltotop.js"></script>
+    <script src="./js/useraccount.js"></script>
+  </body>
+</html>

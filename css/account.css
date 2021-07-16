@@ -1,0 +1,679 @@
+body{
+    overflow: hidden;
+}
+div.accountContainer{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin:0 auto;
+}
+/* My Cart */
+/* memberInfo */
+div.accountContainer div.personalImg{
+    display: flex;
+    justify-content: center;
+    margin: 6px auto;
+    width: 800px;
+    /* border: 2px dashed #116975; */
+    background-color: #11697510;
+    border-radius: 10px;
+}
+/* 大頭照 */
+div.accountContainer div.personalImg div.headshot{
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.accountContainer div.personalImg div.headshot div.imgArea img{
+    width: 260px;
+    height: 260px;
+    border-radius: 10px;
+    overflow: hidden;
+    /* object-fit: cover(不變形,填滿,裁切) contain(不變形,不填滿,不裁切)*/
+    object-fit: cover; 
+}
+div.accountContainer div.personalImg div.headshot label{
+    background-color: #116975;
+    color: white;
+    margin-top: 5px;
+    border-radius: 50px;
+    width: 150px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 1s;
+    position: relative;
+}
+div.accountContainer div.personalImg div.headshot label:hover{
+    background-color: #E24444;
+    transform: translateY(-1px);
+}
+div.accountContainer div.personalImg div.headshot input{
+    position: absolute;
+    width: 1px;
+    opacity: 0;
+    z-index: -99;
+}
+
+/* 會員資訊 */
+div.accountContainer div.personalImg div.info {
+    margin: 10px;
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+div.accountContainer div.personalImg div.info div{
+    display: flex;
+    align-items: center;
+}
+div.accountContainer div.personalImg div.info div img{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+div.accountContainer div.personalImg div.info div button{
+    margin-left: 10px;
+    border-radius: 50px;
+    border: 1px solid #bdb000;
+    background-color: #bdb000;
+    color: white;
+    cursor: pointer;
+    transition: all 1s;
+}
+div.accountContainer div.personalImg div.info div button:hover{
+    transform: translateY(-1px);
+    border: 1px solid #E24444;
+    background-color: #E24444;
+}
+/* 先隱藏起來 */
+input.editInput {
+    display: none;
+}
+input.-on{
+    display: block;
+    border: 2px solid #116975;
+    border-radius: 50px;
+    outline: none;
+    font-weight: bold;
+    color: #116975;
+    margin: 15px 0;
+}
+p.memberDetail{
+    display: block;
+}
+p.-off{
+    display: none;
+}
+
+@media (max-width:1100px) {
+    div.accountContainer div.personalImg{
+        width: 100%;
+    }
+}
+
+
+/*  */
+/* breakPage */
+div.accountContainer div.breakPage{
+    display: flex;
+    border-bottom: 1px solid black;
+    width: 100%;
+    margin: 0 auto;
+}
+div.accountContainer div.breakPage div p{
+    border: 1px solid black;
+    border-radius: 5px 5px 0 0;
+    border-bottom: none;
+    margin-right: 10px;
+    margin-bottom: 0;
+    cursor: pointer;
+    width: 200px;
+    text-align: center;
+}
+div.accountContainer div.breakPage div:nth-child(1) p{
+    border: 1px dashed black;
+    border-bottom: none;
+    background-color: black;
+    color: white;
+    transition: all .5s;
+}
+div.accountContainer div.breakPage div:nth-child(2) p{
+    border: 1px dashed black;
+    border-bottom: none;
+    transition: all .5s;
+}
+div.accountContainer div.breakPage div:nth-child(3) p{
+    border: 1px dashed black;
+    border-bottom: none;
+    transition: all .5s;
+}
+/* MyCart table */
+div.accountContainer table.cart{
+    width: 100%;
+    margin: 1% auto;
+    border-collapse: collapse;
+}
+div.accountContainer table.cart tr th{
+    border-bottom: 1px dashed #116975;
+}
+/* Total Price樣式設定 */
+div.accountContainer table.cart tr#insertPoint{
+    color: #E24444;
+    font-weight: bold;
+}
+/* 選到動畫效果 */
+div.accountContainer table.cart tr:hover{
+    background-color: #e2444480;
+    transition: all 1s;
+}
+/* 讓最後兩個tr不要有hover效果 */
+div.accountContainer table.cart tr:first-child:hover, tr#insertPoint:hover{
+    background-color: white;
+}
+div.accountContainer table.cart tr:last-child:hover{
+    background-color: white;
+}
+div.accountContainer table.cart tr td{
+    text-align: center;
+    padding: 10px 0;
+}
+div.accountContainer table.cart tr td button#checkOut{
+    padding: 5px 10px;
+    background-color: #bdb000;
+    border: 1px solid #bdb000;
+    border-radius: 20px;
+    color: white;
+    margin-left: 0px;
+    font-weight: bold;
+    transition: all .5s;
+    cursor: pointer;
+}
+div.accountContainer table.cart tr td button#checkOut:hover{
+    background-color: #E24444;
+    border: 1px solid #E24444;
+    transform: translateY(-1px);
+}
+div.accountContainer table.cart #insertPoint{
+    border-top: 1px dashed #116975;
+}
+/* 垃圾桶 */
+div.accountContainer table.cart tr td:last-child img{
+    width: 20px;
+    cursor: pointer;
+}
+div.accountContainer table.cart tr td:last-child img:hover{
+    transform:scaleX(-1);
+    transition: all .5s;
+}
+div.accountContainer table.cart tr th:last-child img{
+    width: 20px;
+    cursor: pointer;
+}
+div.accountContainer table.cart tr th:last-child img:hover{
+    transform:rotate(60deg);
+    transition: all .5s;
+}
+/* 加減功能 */
+div.accountContainer table.cart tr td:nth-child(3) button{
+    background-image: url(../img/add.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    background-color:#ffffff00;
+    border: none;
+    cursor: pointer;
+}
+div.accountContainer table.cart tr td:nth-child(3) button.minus{
+    background-image: url(../img/minus.png);
+}
+.productsImg{
+    width: 50px;
+    height: 50px;
+}
+
+/* shipmentContainer */
+div.accountContainer div.shipmentContainer{
+    width: 100%;
+    margin: 0 auto;
+    /* 暫時先關掉shipment */
+    display: none;
+}
+div.accountContainer div.shipmentContainer p {
+    font-size: 20px;
+}
+div.shipmentContainer div.shipmentTracking{
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    margin: 5% auto;
+    
+}
+div.shipmentTracking div.leftTracking{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+div.shipmentTracking div.leftTracking div{
+    margin-bottom: 150px;
+    width: 100%;
+    text-align: center;
+}
+div.shipmentTracking div.leftTracking div:nth-child(1){
+    border-top: 1px dashed black;
+    position: relative;
+}
+div.shipmentTracking div.leftTracking div:nth-child(1) img{
+    width: 100px;
+    opacity: .5;
+}
+div.shipmentTracking div.leftTracking div:nth-child(1) p::before{
+    content: "";
+    display: inline-block;
+    border-top: 10px solid #E24444;
+    border-right: 10px solid transparent;
+    border-bottom: 0 solid blue;
+    border-left: 10px solid transparent;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+div.shipmentTracking div.leftTracking div:nth-child(1) p::after{
+    content: "";
+    display: inline-block;
+    border: 15px solid #116975;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%)
+}
+div.shipmentTracking div.leftTracking div:nth-child(3){
+    border-top: 1px dashed black;
+    position: relative;
+}
+div.shipmentTracking div.leftTracking div:nth-child(3) img{
+    width: 100px;
+    opacity: .5;
+}
+div.shipmentTracking div.leftTracking div:nth-child(3) p::before{
+    content: "";
+    display: inline-block;
+    border-top: 10px solid #E24444;
+    border-right: 10px solid transparent;
+    border-bottom: 0 solid blue;
+    border-left: 10px solid transparent;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+div.shipmentTracking div.leftTracking div:nth-child(3) p::after{
+    content: "";
+    display: inline-block;
+    border: 15px solid #116975;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%)
+}
+div.shipmentTracking div.rightTracking{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-left: 1px dashed black;
+    width: 50%;
+}
+div.shipmentTracking div.rightTracking div{
+    margin-bottom: 150px;
+    width: 100%;
+    text-align: center;
+}
+div.shipmentTracking div.rightTracking div:nth-child(2){
+    border-top: 1px dashed black;
+    position: relative;
+    margin-top: 10%;
+}
+div.shipmentTracking div.rightTracking div:nth-child(2) img{
+    width: 100px;
+    opacity: .5;
+}
+div.shipmentTracking div.rightTracking div:nth-child(2) p::before{
+    content: "";
+    display: inline-block;
+    border-top: 10px solid #E24444;
+    border-right: 10px solid transparent;
+    border-bottom: 0 solid blue;
+    border-left: 10px solid transparent;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation-name: triangeleFlash;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+div.shipmentTracking div.rightTracking div:nth-child(2) p::after{
+    content: "";
+    display: inline-block;
+    border: 15px solid #116975;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    animation-name: ballFlash;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    
+}
+div.shipmentTracking div.rightTracking div:nth-child(4){
+    border-top: 1px dashed black;
+    position: relative;
+    margin-top: 10%;
+}
+div.shipmentTracking div.rightTracking div:nth-child(4) img{
+    width: 100px;
+    opacity: .5;
+}
+div.shipmentTracking div.rightTracking div:nth-child(4) p::before{
+    content: "";
+    display: inline-block;
+    border-top: 10px solid #E24444;
+    border-right: 10px solid transparent;
+    border-bottom: 0 solid blue;
+    border-left: 10px solid transparent;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+div.shipmentTracking div.rightTracking div:nth-child(4) p::after{
+    content: "";
+    display: inline-block;
+    border: 15px solid #116975;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+/* 以下是動畫效果 */
+@keyframes ballFlash{
+    0%{
+        border: 15px solid #116975;
+    }
+    100%{
+        border: 20px solid #E24444;
+    }
+}
+@keyframes triangeleFlash{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 5px;
+    }
+}
+
+/* history */
+div.accountContainer table.history{
+    width: 100%;
+    margin: 1% auto;
+    border-collapse: collapse;
+    /* 暫時關掉history */
+    display: none;
+}
+div.accountContainer table.history tr th{
+    background-color: #11697520;
+    color: #000000;
+}
+div.accountContainer table.history tr td{
+    text-align: center;
+    padding: 10px 0;
+}
+.lastTotal{
+    color: #E24444;
+}
+#insertPoint{
+    border-top: 1px dashed #11697520;
+}
+
+
+@media (max-width:768px) {
+    div.accountContainer{
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    /* My Cart */
+    /* member info */
+    div.accountContainer div.personalImg {
+        width: 90%;
+        margin-top: 10px;
+        align-items: flex-start;
+    }
+    div.accountContainer div.personalImg div.headshot{
+        justify-content: flex-start;
+        height: 230px;
+    }
+    
+    div.accountContainer div.personalImg div.headshot div.imgArea img{
+        width: 200px;
+        height: 200px;
+    }
+    div.accountContainer div.personalImg div.headshot label{
+        width: 150px;
+    }
+    div.accountContainer div.personalImg div.info p{
+        font-size: 12px;
+    }
+    /*  */
+    div.accountContainer div.breakPage{
+        width: 95%;
+    }
+    div.accountContainer div.breakPage div {
+        margin: 0;
+    }
+    div.accountContainer div.breakPage div p {
+        width: 100px;
+    }
+    /* table */
+    div.accountContainer table.cart{
+        width: 95%;
+    }
+    /* shipment */
+    div.accountContainer div.shipmentContainer{
+        width: 90%;
+    }
+    div.accountContainer div.shipmentContainer p{
+        font-size: 16px;
+    }
+    /* history */
+    div.accountContainer table.history{
+        width: 90%;
+    }
+    /* shipping icon */
+    div.shipmentTracking div.leftTracking div:nth-child(1) img{
+        width: 70px;
+    }
+    div.shipmentTracking div.leftTracking div:nth-child(3) img{
+        width: 70px;
+    }
+    div.shipmentTracking div.rightTracking div:nth-child(2) img{
+        width: 70px;
+    }
+    div.shipmentTracking div.rightTracking div:nth-child(4) img{
+        width: 70px;
+    }
+}
+
+@media (max-width:576px) {
+    div.accountContainer div.personalImg{
+        width: 95%;
+    }
+    div.accountContainer div.personalImg div.headshot {
+        height: 0;
+    }
+    div.accountContainer div.personalImg div.headshot div.imgArea img{
+        width: 120px;
+        height: 120px;
+    }
+    div.accountContainer div.personalImg div.headshot label{
+        width: 120px;
+        font-size: 14px;
+    }
+    div.accountContainer div.personalImg div.info div button{
+        font-size: 12px;
+        width: 45px;
+    }
+    div.shipmentTracking div.leftTracking div{
+        margin-bottom: 100px;
+    }
+    div.shipmentTracking div.rightTracking div{
+        margin-bottom: 100px;
+    }
+    div.shipmentTracking div.rightTracking div:nth-child(2){
+        margin-top: 20%;
+    }
+    div.shipmentTracking div.rightTracking div:nth-child(4){
+        margin-top: 20%;
+    }
+}
+
+@media (max-width:400px){
+    /* memeber info */
+    div.accountContainer div.personalImg{
+        width: 98%;
+        margin-left: 5px;
+    }
+    div.accountContainer div.personalImg div.headshot label{
+        width: 80px;
+        font-size: 8px;
+    }
+    div.accountContainer div.personalImg div.headshot div.imgArea img{
+        width: 65px;
+        height: 65px;
+    }
+    div.accountContainer div.personalImg div.headshot label{
+        font-size: 10px;
+    }
+    div.accountContainer div.personalImg div.info{
+        margin-left: 0;
+    }
+    div.accountContainer div.personalImg div.info div button{
+        font-size: 8px;
+        width: 25px;
+        margin-left: -4px;
+        padding-left: 0;
+    }
+    /*  */
+    div.accountContainer div.breakPage div p{
+        width: 75px;
+        font-size: 12px;
+    }
+    div.accountContainer table.cart{
+        width: 95%;
+        font-size: 12px;
+        font-weight: normal;
+    }
+    div.accountContainer table.cart tr th:last-child img{
+        width: 14px;
+    }
+    div.accountContainer table.cart tr td:last-child img{
+        width: 14px;
+    }
+    div.accountContainer div.shipmentContainer p{
+        font-size: 12px;
+    }
+    div.accountContainer table.cart tr td:nth-child(3) button{
+        width: 16px;
+        height: 16px;
+    }
+    div.shipmentTracking div.leftTracking div{
+        margin-bottom: 60px;
+    }
+    div.shipmentTracking div.rightTracking div{
+        margin-bottom: 60px;
+    }
+    /* 改圓 */
+    div.shipmentTracking div.leftTracking div:nth-child(1) p::after{
+        border: 10px solid #116975;
+    }
+    div.shipmentTracking div.leftTracking div:nth-child(3) p::after{
+        border: 10px solid #116975;
+    }
+    div.shipmentTracking div.rightTracking div:nth-child(2) p::after{
+        border: 10px solid #116975;
+    }
+    div.shipmentTracking div.rightTracking div:nth-child(4) p::after{
+        border: 10px solid #116975;
+    }
+    @keyframes ballFlash{
+        0%{
+            border: 10px solid #116975;
+        }
+        100%{
+            border: 15px solid #E24444;
+        }
+    }
+    div.accountContainer table.cart tr td button#checkOut{
+        padding: 5px;
+        border-radius: 12px;
+        font-size: 8px;
+        width: 80px;
+    }
+
+    /* history */
+    div.accountContainer table.history tr th{
+        font-size: 12px;
+    }
+    div.accountContainer table.history tr td{
+        font-size: 12px;
+    }
+    div.accountContainer table.history tr th img{
+        width: 14px;
+    }
+    div.accountContainer table.history tr td img{
+        width: 14px;
+    }
+
+    /*  */
+    div.accountContainer div.personalImg div.info div img{
+        width: 15px;
+        height: 15px;
+        margin-right: 0;
+    }
+    div.accountContainer div.personalImg div.info div p{
+        margin: 8px;
+    }
+    /* shipping icon */
+    div.shipmentTracking div.leftTracking div:nth-child(1) img{
+        width: 50px;
+        opacity: .5;
+    }
+    div.shipmentTracking div.leftTracking div:nth-child(3) img{
+        width: 50px;
+        opacity: .5;
+    }
+    div.shipmentTracking div.rightTracking div:nth-child(2) img{
+        width: 50px;
+    }
+    div.shipmentTracking div.rightTracking div:nth-child(4) img{
+        width: 50px;
+    }
+    div.shipmentTracking div.rightTracking div:nth-child(2){
+        margin-top: 25%;
+    }
+    div.shipmentTracking div.rightTracking div:nth-child(4){
+        margin-top: 25%;
+    }
+}

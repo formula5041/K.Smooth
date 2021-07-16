@@ -1,0 +1,318 @@
+div.contactContainer {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 2% auto;
+}
+div.contactContainer img{
+    max-width: 100%;
+}
+div.infoDown{
+    display: flex;
+}
+/* location */
+div.infoDown div.location{
+    background-color: #E24444;
+    color: white;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+div.infoDown div.location p:nth-child(1) {
+    font-size: 32px;
+    border-bottom: 1px solid white;
+    margin:30px;
+}
+div.infoDown div.location p {
+    font-size: 20px;
+    margin:30px;
+}
+/* form */
+div.infoDown div.form{
+    background: #116975;
+    width: 50%;
+}
+div.infoDown div.form p{
+    margin: 0;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+}
+div.infoDown div.form img{
+    display: block;
+    width: 10%;
+    height: 10%;
+    margin: 10px auto;
+}
+div.infoDown div.form form{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    position: relative;
+}
+div.infoDown div.form form div.headChoice{
+    background-color: white;
+    margin-bottom: 2%;
+    border-radius: 50px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+div.infoDown div.form form div.headChoice img{
+    width: 12%;
+    height: 12%;
+    margin: 0 12px;
+    cursor: pointer;
+    transition: all .5s;
+    padding: 3px;
+    border-radius: 5px;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes kSwing{
+    50%{
+        transform: scaleX(-1);
+    }
+    100%{
+        transform: translateY(-5px);
+        background-color: #00000020;
+    }
+}
+div.infoDown div.form form div.headChoice img:hover{
+    transform: translateY(-5px);
+    background-color: #00000020;
+}
+
+div.infoDown div.form form input{
+    border: 1px solid white;
+    margin-bottom: 10px;
+    outline: none;
+    transition: all .5s;
+}
+div.infoDown div.form form input:focus{
+    background-color: #a7a7a7;
+    border: 1px solid #a7a7a7;
+    color: white;
+}
+div.infoDown div.form form textarea{
+    resize: none;
+    height: 200px;
+    margin-bottom: 20px;
+    outline: none;
+    transition: all .5s;
+}
+div.infoDown div.form form textarea:focus{
+    background-color: #a7a7a7;
+    border: 1px solid #a7a7a7;
+    color: white;
+}
+div.infoDown div.form form button{
+    border: 1px solid white;
+    width: 100px;
+    outline: none;
+    cursor: pointer;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+
+div.infoDown div.form form button:hover{
+    background-color: #E24444;
+    border: 1px solid #E24444;
+    color: white;
+    transition: all .5s;
+}
+/* guestBook */
+div.guestBook {
+    width: 100%;
+    background-color: #656765;
+}
+
+div.guestBook h2{
+    color: white;
+    text-align: center;
+    font-size: 36px;
+    margin-top: 2%;
+}
+div.guestBook div.bookContainer {
+    width: 90%;
+    background-color: white;
+    margin:2% auto ;
+}
+div.guestBook div.bookContainer div.messageArea {
+    display: flex;
+    align-items: top;
+    border-bottom: 1px dashed #116975;
+}
+div.guestBook div.bookContainer div.messageArea div.headShot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+div.guestBook div.bookContainer div.messageArea div.headShot div.img{
+    background-image: url(../img/headshot/brown.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+div.guestBook div.bookContainer div.messageArea div.headShot span{
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 16px;
+}
+div.guestBook div.bookContainer div.messageArea div.messageInfo{
+    width: 70%;
+    margin: 20px;
+    height: 250px;
+    overflow-y: auto;
+}
+div.guestBook div.bookContainer div.messageArea div.messageInfo span{
+    font-size: 20px;
+}
+div.guestBook div.bookContainer div.messageArea div.messageInfo p.topic{
+    font-weight: bold;
+    font-size: 22px;
+}
+div.guestBook div.bookContainer div.messageArea div.messageInfo p.messageDetail{
+    font-size: 16px;   
+}
+div.guestBook div.bookContainer div.messageArea:nth-child(2) {
+    display: flex;
+    align-items: top;
+    flex-direction: row-reverse;
+    border: none;
+}
+/* 官方blue */
+div.guestBook div.bookContainer div.messageArea div.headShot div#offical{
+    background-image: url(../img/headshot/blue.png);
+}
+/* RWD */
+@media(max-width:1000px){
+    div.contactContainer div.infoDown div.location{
+        padding: 20px 0;
+    }
+    div.contactContainer div.infoDown div.location p{
+        font-size: 18px;   
+        margin: 25px 20px;
+    }
+    div.contactContainer div.infoDown div.location p:first-child {
+        font-size: 26px;
+    }
+}
+
+
+@media(max-width:768px){
+    div.contactContainer{
+        width: 100%;
+    }
+    div.contactContainer div.infoDown{
+        display: flex;
+        flex-direction: column;
+    }
+    div.contactContainer div.infoDown div.location{
+        width: 100%;
+    }
+    div.contactContainer div.infoDown div.location p{
+        font-size: 16px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    div.contactContainer div.infoDown div.location p:first-child {
+        font-size: 24px;
+    }
+    div.contactContainer div.infoDown div.form{
+        width: 100%;
+    }
+    div.contactContainer div.guestBook{
+        width: 100%;
+    }
+    div.infoDown div.form img{
+        width: 10%;
+        height: 10%;
+        margin: 2vw auto;
+    }
+    div.infoDown div.form form div.headChoice{
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    div.infoDown div.form form div.headChoice img{
+        width: 50px;
+        height: 60px;
+        margin: 0;
+    }
+    div.infoDown div.form form input{
+        height: 30px;
+    }
+    div.infoDown div.form form button{
+        height: 30px;
+        border-radius: 50px;
+        text-align: center;
+        background-color: white;
+    }
+    /* guestBook */
+    div.guestBook div.bookContainer div.messageArea{
+        padding: 1vw;
+    }
+    div.guestBook h2{
+        font-size: 32px;
+    }
+    div.guestBook div.bookContainer div.messageArea div.headShot span{
+        font-size: 16px;
+    }
+    div.guestBook div.bookContainer div.messageArea div.messageInfo span{
+        font-size: 16px;
+    }
+    div.guestBook div.bookContainer div.messageArea div.messageInfo p.topic{
+        font-size: 24px;
+    }
+    div.guestBook div.bookContainer div.messageArea div.messageInfo p.messageDetail{
+        font-size: 16px;
+    }
+    div.guestBook div.bookContainer div.messageArea:nth-child(2) {
+        display: flex;
+        align-items: top;
+        flex-direction: row-reverse;
+        border: none;
+    }
+    p#ttttt::after{
+        top: 5px;
+        right: 5%;
+        text-align: center;
+        cursor: pointer;
+        animation: toTopSpring 1.5s infinite forwards;
+    }
+}
+@media(max-width:576px){
+    div.contactContainer div.infoDown div.location p{
+        font-size: 14px;
+    }
+    div.contactContainer div.infoDown div.location p:first-child {
+        font-size: 18px;
+    }
+    div.infoDown div.form form div.headChoice img{
+        width: 40px;
+        height: 50px;
+    }
+    div.guestBook div.bookContainer div.messageArea div.messageInfo p.topic{
+        font-size: 20px;
+    }
+    div.guestBook div.bookContainer div.messageArea div.headShot div.img{
+        width: 60px;
+        height: 60px;
+    }
+}
+@media(max-width:360px){
+    div.contactContainer div.infoDown div.location p{
+        font-size: 12px;
+    }
+    div.contactContainer div.infoDown div.location p:first-child {
+        font-size: 16px;
+    }
+    div.infoDown div.form form div.headChoice img{
+        width: 30px;
+        height: 40px;
+    }
+}

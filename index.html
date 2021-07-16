@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>K.Smooth</title>
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/header_footer_sidebar.css">
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body id="body">
+  <div class="container">
+    <header>
+      <div class="logo" id="headerLogo"><a href="./index.html"></a></div>
+      <div class="loginIcon">
+        <a href="./signin_up.html"><img src="./img/login.svg" id="carts"></a>
+        <a href="./account.html"><img src="./img/cart.svg" id="logs"></a>
+      </div>
+    </header>
+    <main id="main">
+      <!-- hamburger -->
+      <label for="checkbox" id="hamOver"></label>
+      <input type="checkbox" id="checkbox">
+      <!-- sideBarNav -->
+      <div class="nav_content" id="nav_contents">
+        <!-- social -->
+        <a href="#">
+          <div class="ig"></div>
+        </a>
+        <a href="#">
+          <div class="twitter"></div>
+        </a>
+        <!-- search -->
+        <input type="text" placeholder="Searching..." id="search">
+        <label for="search" class="search"></label>
+        <!-- list -->
+        <div class="nav_list">
+          <a href="./news.html" class="news">
+            <p>News</p>
+          </a>
+          <a href="./about.html" class="about">
+            <p>About</p>
+          </a>
+          <a href="./products.html" class="products">
+            <p>Products</p>
+          </a>
+          <a href="./contact.html" class="contact">
+            <p>Contact</p>
+          </a>
+          <a href="./games.html" class="play"><p>Games</p></a>
+          <a href="./account.html" class="account">
+            <p>Account</p>
+          </a>
+        </div>
+      </div>
+      <!-- banner -->
+      <div class="main_banner">
+        <img src="./img/photos/banner_1200x500.jpg">
+        <div class="textContent">
+          <h1 class="title">K.SMOOTH BIKE</h1>
+          <h2 class="letters">THE ONLY OPTION OF CHOICE</h2>
+          <a href="./products.html"><button type="button">CHECK PRODUCTS</button></a>
+        </div>
+      </div>
+      <!-- products -->
+      <div class="main_products">
+        <a href="./products.html" class="titleImg">
+          <h2 class="imgTitle"><img src="./img/logo_noLetters_700x400.png">Popular Products</h2>
+        </a>
+        <div class="productShow">
+          <div class="productImg" id="productImg"></div>
+          <div class="productDetail">
+            <p id="hashtag">#1 Most Balance Bike</p>
+            <h1 id="productName">Warrior Ⅰ</h1>
+            <h3 id="productType">Classic</h3>
+            <a href="./products_twoinone_warrior1.html" id="toProduct"><button>SEE MORE</button></a>
+          </div>
+          <div class="productState">
+            <h3>Performance</h3>
+            <p>Balance</p>
+            <p class="value" id="balance">Great</p>
+            <p>Speed</p>
+            <p class="value" id="speed">Excellent</p>
+            <p>Comfort</p>
+            <p class="value" id="comfort">Nice</p>
+          </div>
+        </div>
+        <div class="popular_products">
+          <div class="products1">
+            <a id="switch1"><img src="./img/photos/products/2in1/sale/warrior_1/warrior1_1.png" alt="img"></a>
+            <p>Warrior Ⅰ</p>
+          </div>
+          <div class="products2">
+            <a id="switch2"><img src="./img/photos/products/2in1/sale/princess_1/princess1.png" alt="img"></a>
+            <p>Princess</p>
+          </div>
+          <div class="products3">
+            <a id="switch3"><img src="./img/photos/products/2in1/sale/brave_1/brave1_1.png" alt="img"></a>
+            <p>Brave Ⅰ</p>
+          </div>
+          <div class="products4">
+            <a id="switch4"><img src="./img/photos/products/2in1/sale/brave_2/brave2_1.png" alt="img"></a>
+            <p>Brave ⅠⅠ</p>
+          </div>
+        </div>
+      </div>
+      <!-- about -->
+      <div class="main_card">
+        <a href="./about.html" class="titleImg">
+          <h2 class="imgTitle"><img src="./img/logo_noLetters_700x400.png">About</h2>
+        </a>
+        <div class="threeCard">
+          <div class="itemsCard">
+            <div class="icon"></div>
+            <div class="info">
+              <h3>Timeline</h3>
+              <p>
+                As the world’s largest producer of wooden toys, Hape is clearly dependent on
+                the use of natural materials. A full line of bamboo toys takes...
+              </p>
+            </div>
+            <a href="./about_timeline.html"><button type="button">READ MORE</button></a>
+          </div>
+          <div class="itemsCard">
+            <div class="icon"></div>
+            <div class="info">
+              <h3>Our Story</h3>
+              <p>
+                Hape has strategically considered surface treatment, energy consumption,
+                and packaging options to minimize environmental...
+              </p>
+            </div>
+            <a href="./about_ourstory.html"><button type="button">READ MORE</button></a>
+          </div>
+          <div class="itemsCard">
+            <div class="icon"></div>
+            <div class="info">
+              <h3>Location</h3>
+              <p>
+                Taiwan, Taoyuan City
+                No. 11, Aly. 32, Ln. 32, Xiaxiancuozi, Zingchungli, Qualiti Dayuan Dist., Taoyuan City 337
+                <br>
+                Tel:03-38129483
+              </p>
+            </div>
+            <a href="./about_location.html"><button type="button">READ MORE</button></a>
+          </div>
+          <div class="itemsCard">
+            <div class="icon"></div>
+            <div class="info">
+              <h3>Contribution</h3>
+              <p>
+                Since its establishment, K.Smooth has continued to make continuous efforts in the four 
+                aspects of customer service, employee welfare...
+              </p>
+            </div>
+            <a href="./about_src.html"><button type="button">READ MORE</button></a>
+          </div>
+        </div>
+      </div>
+      <!-- teamMembers -->
+      <div class="teamMembers">
+        <div class="teamBody">
+          <div class="headShot"></div>
+          <div class="teamInfo">
+            <p id="people1_p1">CEO</p>
+            <p id="people1_p2">
+              HI, I am AMBER. We are committed to providing the highest quality and impeccable service. 
+              If you agree with our products, please don't be stingy and give us the greatest encouragement, 
+              thank you!
+            </p>
+          </div>
+          <p class="moreTalk">
+            HI, I am AMBER. We are committed to providing the highest quality and impeccable service. 
+            If you agree with our products, please don't be stingy and give us the greatest encouragement, 
+            thank you!<br>By the way, the coupon numbers is 'SAFE10'!
+          </p>
+        </div>
+        <div class="teamBody">
+          <div class="headShot"></div>
+          <div class="teamInfo"><p>Bernie</p><p>President</p></div>
+          <div class="headShot"></div>
+          <div class="teamInfo"><p>Hobart</p><p>Director</p></div>
+        </div>
+        <div class="teamBody">
+          <div class="teamInfo"><p>Isidore</p><p>Manager</p></div>
+          <div class="headShot"></div>
+          <div class="teamInfo"><p>Llywelyn</p><p>Supervisor</p></div>
+          <div class="headShot"></div>
+        </div>
+        <div class="teamBody">
+          <div class="headShot"></div>
+          <div class="teamInfo coupon"><p>Kenneth</p><p>Design</p></div>
+          <div class="headShot"></div>
+          <div class="teamInfo"><p>Judith</p><p>Assistant</p></div>
+        </div>
+      </div>
+      <!-- news -->
+      <div class="main_news">
+        <a href="./news.html" class="titleImg">
+          <h2 class="imgTitle"><img src="./img/logo_noLetters_700x400.png">Hot News</h2>
+        </a>
+        <div class="hot_news">
+          <table>
+            <tr>
+              <th>Date</th>
+              <th>Items</th>
+              <th>Content</th>
+              <th><img src="./img/like.png"></th>
+            </tr>
+            <tr onclick="document.location ='./news.html';">
+              <td>2021/08/19</td>
+              <td>Discount</td>
+              <td>Every new visitors with a special offer. 50% to 80% DISCOUNT!</td>
+              <td>984 likes</td>
+            </tr>
+            <tr onclick="document.location ='./news.html';">
+              <td>2021/06/03</td>
+              <td>Events</td>
+              <td>Best 3friends hashtags popular on Instagram. Earn more special goods!</td>
+              <td>59 likes</td>
+            </tr>
+            <tr onclick="document.location ='./news.html';">
+              <td>2021/05/11</td>
+              <td>Discount</td>
+              <td>Happy mother's day! Every members discount from 2021/05/14~05/27.</td>
+              <td>339 likes</td>
+            </tr>
+            <tr onclick="document.location ='./news.html';">
+              <td>2021/03/21</td>
+              <td>News</td>
+              <td>World Sports Day: How creativity can add a little rideing to your child’s life?</td>
+              <td>129 likes</td>
+            </tr>
+            <tr onclick="document.location ='./news.html';">
+              <td>2021/01/01</td>
+              <td>Events</td>
+              <td>Welcome 2021! Celebrate new year! Hashtags 5 friends, earn two for one coupon.</td>
+              <td>253 likes</td>
+            </tr>
+            <tr onclick="document.location ='./news.html';">
+              <td>2020/12/20</td>
+              <td>Events</td>
+              <td>This Christmas, we give you our Heart. Dancing part at Central Prak on 2020/12/25.</td>
+              <td>664 likes</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <!-- contact -->
+      <div class="main_contact">
+        <a href="./contact.html" class="titleImg">
+          <h2 class="imgTitle"><img src="./img/logo_noLetters_700x400.png">Contact Us</h2>
+        </a>
+        <div class="contactContainer">
+          <img src="./img/photos/contact/banner_1400x500_U1920.png" alt="banner">
+          <div class="infoDown">
+              <div class="location">
+                  <p>Taiwan Taoyuan City</p>
+                  <p>
+                      No. 1, Aly. 3, Ln. 2, Xiaxiancuo
+                      zi, Dayuan Dist., <br>Taoyuan City  337
+                  </p>
+                  <p>Email：wooden627@gmail.com</p>
+                  <p>Tel1：+886930776895</p>
+                  <p>Tel2：+88633815661</p>
+              </div>
+              <div class="form">
+                  <img src="./img/photos/contact/comment.png" alt="messageIcon">
+                  <p>Choose Your Avatar!</p>
+                  <form action="#" method="GET">
+                      <div class="headChoice">
+                          <img src="./img/headshot/brown.png" class="kHead">
+                          <img src="./img/headshot/red.png" class="kHead">
+                          <img src="./img/headshot/yellow.png" class="kHead">
+                          <img src="./img/headshot/pink.png" class="kHead">
+                          <img src="./img/headshot/gray.png" class="kHead">
+                      </div>
+                      <input type="text" name="name" placeholder="Your Name" id="name" required>
+                      <input type="text" name="topic" placeholder="Topic" id="topic" required>
+                      <textarea name="message" id="message" placeholder="Message" required></textarea>
+                      <button type="submit" id="submit">Send</button>
+                  </form>
+              </div>
+          </div>
+          <div class="guestBook">
+            <h2 id="postPoint">Guest Book</h2>
+              <div class="bookContainer">
+                <div class="messageArea">
+                    <div class="headShot">
+                        <div class="img"></div>
+                        <span>Leonardo</span>
+                    </div>
+                    <div class="messageInfo">
+                        <span>2021/05/11 09:12:33</span>
+                        <p class="topic">How to buy 100 bikes in this website?</p>
+                        <p class="messageDetail">
+                            Last Saturday, I ordered 100 balance bikes on this webpage, 
+                            but the system kept showing ERROR and 404 messages, so I didn’t know what to do?
+                            Could you please handle it quickly? My child will have his birthday next week, 
+                            and hope to receive those bikes tomorrow! Otherwise my wife will kill me! 😱
+                        </p>
+                    </div>
+                </div>
+                <div class="messageArea">
+                    <div class="headShot">
+                        <div class="img" id="offical"></div>
+                        <span>Offical</span>
+                    </div>
+                    <div class="messageInfo">
+                        <span>2021/05/12 10:22:23</span>
+                        <p class="topic">K.Smooth® reply</p>
+                        <p class="messageDetail">
+                            Hi Pikachu! Sorry, due to the Children’s Day these few days, many parents 
+                            have bought our products, resulting in fewer goods. In addition, you have ordered 100 vehicles, 
+                            which is a large quantity 😱 so the system will not be able to deliver. It is recommended that 
+                            you call our company's phone directly, and there will be someone to serve you. 
+                        </p>
+                    </div>
+                </div>
+              </div>
+              <div class="guestBookFooter">
+                <a href="./contact.html">READ MORE+</a>
+              </div>
+          </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer_nav">
+        <a href="./news.html">
+          <p>News</p>
+        </a>
+        <a href="./about.html">
+          <p>About</p>
+        </a>
+        <a href="./products.html">
+          <p>Products</p>
+        </a>
+        <a href="./contact.html">
+          <p>Contact</p>
+        </a>
+        <a href="./games.html"><p>Games</p></a>
+        <a href="./account.html">
+          <p>Account</p>
+        </a>
+      </div>
+      <div class="footer_social">
+        <a href="#">
+          <p></p>
+        </a>
+        <a href="#">
+          <p></p>
+        </a>
+        <a href="#">
+          <p></p>
+        </a>
+        <a href="#">
+          <p></p>
+        </a>
+      </div>
+      <div class="footer_signup">
+        <form action="#" method="GET">
+          <button type="button"><a href="./signin_up.html" style="color:white">SIGN IN</a></button>
+        </form>
+      </div>
+      <div class="footer_allRights" >
+        <p id="ttttt"></p>
+        <p>K.Smooth® 2021 All Right reserved</p>
+      </div>
+    </footer>
+  </div>
+  <script src="./js/sidebar.js"></script>
+  <script src="./js/teammemters.js"></script>
+  <script src="./js/scrolltotop.js"></script>
+  <script src="./js/productstate.js"></script>
+  <script src="./js/contact.js"></script>
+  <script src="./js/useraccount.js"></script>
+</body>
+
+</html>

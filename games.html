@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
+    <title>Games</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/header_footer_sidebar.css">
+    <link rel="stylesheet" href="./css/games.css">
+</head>
+<body id="body">
+    <div class="container">
+        <header>
+            <div class="logo"><a href="./index.html"></a></div>
+            <div class="loginIcon">
+                <a href="./signin_up.html"><img src="./img/login.svg" id="carts"></a>
+                <a href="./account.html"><img src="./img/cart.svg" id="logs"></a>
+            </div>
+        </header>
+        <main>
+            <!-- hamburger -->
+            <label for="checkbox" id="hamOver"></label>
+            <input type="checkbox" id="checkbox">
+            <!-- nav -->
+            <div class="nav_content" id="nav_contents">
+                <!-- search -->
+                <input type="text" placeholder="Searching..." id="search">
+                <label for="search" class="search"></label>
+                <!-- list -->
+                <div class="nav_list">
+                    <a href="./news.html" class="news"><p>News</p></a>
+                    <a href="./about.html" class="about"><p>About</p></a>
+                    <a href="./products.html" class="products"><p>Products</p></a>
+                    <a href="./contact.html" class="contact"><p>Contact</p></a>
+                    <a href="./games.html" class="play"><p>Games</p></a>
+                    <a href="./account.html" class="account"><p>Account</p></a>
+                </div>
+            </div>
+            <!-- breadCrumbs -->
+            <div class="breadCrumbs">
+                <a href="./index.html" class="homeIcon"></a>
+                <a href="./games.html">Games</a>
+            </div>
+            <!-- games -->
+            <div class="gamesContainer">
+                <h1 class="title">K.SMOOTH GAMES</h1>
+                <h2 class="info">Hey, kids! That's play a game to earn -60$ coupon!</h2>
+                <span class="control">*Control Button: A=LEFT, W=UP, D=RIGHT, S=DOWN</span>
+                <span class="control">*Check Button: K=GET<span style="color: rgb(240, 162, 162);" id="doubleClick">(Double Click)</span>, L=CANCEL</span>
+                <div class="countArea">
+                    <h4>Your Coupons</h4>
+                    <span class="couponShow">1：</span>
+                    <span class="couponShow">2：</span>
+                    <span class="couponShow">3：</span>
+                    <span class="couponShow">4：</span>
+                </div>
+                <div class="playZone">
+                    <div class="moveButton">
+                        <button type="button" class="n">N</button>
+                        <button type="button" id="w">W</button>
+                        <button type="button" class="n">N</button>
+                        <button type="button" id="a">A</button>
+                        <button type="button" id="s">S</button>
+                        <button type="button" id="d">D</button>
+                    </div>
+                    <div class="playArea">
+                        <div id="playButton">Play</div>
+                    </div>
+                    <div class="abButton">
+                        <button type="button" id="i">I</button>
+                        <button type="button" class="n" id="n1">N</button>
+                        <button type="button" class="n">N</button>
+                        <button type="button" id="l">L</button>
+                    </div>
+                </div>     
+                <audio class="backgroundSound">
+                    <source src="./sound/gamesound2.wav" type="audio/wav">
+                </audio>       
+                <audio class="clickSound">
+                    <source src="./sound/click.wav" type="audio/wav">
+                </audio>   
+                <audio class="getCoupon">
+                    <source src="./sound/get.wav" type="audio/wav">
+                </audio>    
+                <audio class="successSound">
+                    <source src="./sound/success.mp3" type="audio/mp3">
+                </audio>      
+            </div>
+        </main>
+        <footer>
+            <div class="footer_nav">
+                <a href="./news.html"><p>News</p></a>
+                <a href="./about.html"><p>About</p></a>
+                <a href="./products.html"><p>Products</p></a>
+                <a href="./contact.html"><p>Contact</p></a>
+                <a href="./games.html"><p>Games</p></a>
+                <a href="./account.html"><p>Account</p></a>
+            </div>
+            <div class="footer_social">
+                <a href="#"><p></p></a>
+                <a href="#"><p></p></a>
+                <a href="#"><p></p></a>
+                <a href="#"><p></p></a>
+            </div>
+            <div class="footer_signup">
+                <form action="#" method="GET">
+                    <button type="button"><a href="./signin_up.html" style="color:white">SIGN IN</a></button>
+                </form>
+            </div>
+            <div class="footer_allRights">
+                <p id="ttttt"></p>
+                <p>K.Smooth® 2021 All Right reserved</p>
+            </div>
+        </footer>
+    </div>
+    <script src="./js/sidebar.js"></script>
+    <script src="./js/scrolltotop.js"></script>
+    <script src="./js/useraccount.js"></script>
+    <script src="./js/games.js"></script>
+</body>
+</html>

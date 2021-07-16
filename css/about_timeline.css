@@ -1,0 +1,358 @@
+div.container{
+    position: relative;
+}
+main{
+    position: relative;
+}
+div.timelineContainer{
+    width: 80%;
+    margin: 2% auto;
+    display: flex;
+}
+/* left */
+div.leftSide{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+div.leftSide div.leftDiv{
+    height: 30%;
+    margin-bottom: 40px;
+}
+div.leftSide div.leftDiv div.leftInfo{
+    border: 5px solid #116975;
+    border-radius: 0 30px 0 0;
+    border-left: 0px;
+    border-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+    cursor: pointer;
+}
+div.leftSide div.leftDiv div.leftInfo:hover img{
+    transform: scaleX(-1);
+}
+
+@media (max-width:1000px) {
+    @keyframes lshow{
+        0%{
+            height: 150px;
+        }
+        100%{
+            border: 5px solid #116975;
+            border-radius:30px;
+            height: 170px;
+            background: #7a7a7a;
+            color:white;
+        }
+    }
+}
+div.leftSide div.leftDiv div.leftInfo h1{
+    margin-bottom: 0;
+}
+div.leftSide div.leftDiv div.leftInfo h1, h2{
+    margin-right: 1.5vw;
+    margin-top: 2vh;
+    font-size: 1.3rem;
+}
+div.leftSide div.leftDiv div.leftInfo img {
+    width: 5vw;
+    position: absolute;
+    top: 10px;
+    left: 1vw;
+    transition: all .5s;
+}
+
+/* right */
+div.rightSide{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-left: 20px;
+}
+div.rightSide div.rightDiv{
+    height: 30%;
+    margin-top: 40px;
+}
+div.rightSide div.rightDiv div.rightInfo{
+    border: 5px solid #E24444;
+    border-radius: 30px 0 0 0;
+    border-right: none;
+    border-bottom: none;
+    position: relative;
+    cursor: pointer;
+}
+div.rightSide div.rightDiv div.rightInfo:hover img{
+    transform: scaleX(-1);
+}
+@media (max-width:1000px) {
+    @keyframes rshow{
+        0%{
+            height: 150px;
+        }
+        100%{
+            border: 5px solid #116975;
+            border-radius:30px;
+            height: 170px;
+            background: #7a7a7a;
+            color:white;
+        }
+    }
+}
+div.rightSide div.rightDiv div.rightInfo h1{
+    margin-bottom: 0;
+}
+div.rightSide div.rightDiv div.rightInfo h1, h2 {
+    margin-left: 1.5vw;
+    margin-top: 2vh;
+    font-size: 1.3rem;
+}
+div.rightSide div.rightDiv div.rightInfo img {
+    width: 5vw;
+    position: absolute;
+    top: 10px;
+    right: 1vw;
+    transition: all .5s;
+}
+/* colseBtn Animation */
+@keyframes closeJump{
+    50%{
+        transform: translateY(-10px);
+        background-color: #E24444;
+        border-radius: 100px;
+    }
+}
+
+@media (max-width:768px) {
+    div.timelineContainer{
+        width: 100%;
+    }
+    /* left */
+    div.leftSide div.leftDiv div.leftInfo{
+        margin-left: 25px;
+        
+    }
+    div.leftSide div.leftDiv div.leftInfo h1, h2{
+        margin-right: 10px;
+        margin-top: 20px;
+        font-size: 20px
+    }
+    div.leftSide div.leftDiv div.leftInfo img {
+        width: 40px;
+        position: absolute;
+        transform: translate(15px,10px);
+    }
+    
+    /* right */
+    div.rightSide{
+        width: 50%;
+    }
+    div.rightSide div.rightDiv{
+        margin-right: 25px;
+    }
+    div.rightSide div.rightDiv div.rightInfo h1, h2{
+        margin-right: 10px;
+        margin-top: 20px;
+        font-size: 20px
+    }
+    div.rightSide div.rightDiv div.rightInfo img {
+        width: 40px;
+        transform: translate(-15px,10px);
+    }
+}
+@media (max-width:576px){
+    div.rightSide{
+        margin-left: 0;
+    }
+    div.leftSide div.leftDiv div.leftInfo h1, h2{
+        font-size: 16px
+    }
+    div.rightSide div.rightDiv div.rightInfo h1, h2{
+        font-size: 16px
+    }
+    div.leftSide div.leftDiv div.leftInfo img {
+        width: 30px;
+        transform: translate(15px,5px);
+    }
+    div.rightSide div.rightDiv div.rightInfo img {
+        width: 30px;
+        transform: translate(-15px,5px);
+    }
+}
+@media (max-width:360px){
+    div.leftSide div.leftDiv div.leftInfo h1, h2{
+        font-size: 14px
+    }
+    div.rightSide div.rightDiv div.rightInfo h1, h2{
+        font-size: 14px
+    }
+    div.leftSide div.leftDiv div.leftInfo img {
+        width: 25px;
+        transform: translate(5px,5px);
+    }
+    div.rightSide div.rightDiv div.rightInfo img {
+        width: 25px;
+        transform: translate(-5px,5px);
+    }
+}
+/* shipmentContainer */
+div.shipmentContainer div.shipmentTracking{
+    display: flex;
+    justify-content: center;
+    font-size: 1.5vw;
+    margin: 5% auto;
+    width: 80vw;
+}
+div.shipmentTracking div.leftTracking{
+    display: flex;
+    flex-direction: column;
+    width: 35vw;
+}
+div.shipmentTracking div.leftTracking div{
+    margin-bottom: 20vh;
+    width: 100%;
+    text-align: center;
+}
+div.shipmentTracking div.leftTracking div:nth-child(1){
+    border-top: 1px dashed black;
+    position: relative;
+}
+div.shipmentTracking div.leftTracking div:nth-child(1) p::before{
+    content: "";
+    display: inline-block;
+    border-top: 10px solid #E24444;
+    border-right: 10px solid transparent;
+    border-bottom: 0 solid blue;
+    border-left: 10px solid transparent;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+div.shipmentTracking div.leftTracking div:nth-child(1) p::after{
+    content: "";
+    display: inline-block;
+    border: 15px solid #116975;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%)
+}
+div.shipmentTracking div.leftTracking div:nth-child(3){
+    border-top: 1px dashed black;
+    position: relative;
+}
+div.shipmentTracking div.leftTracking div:nth-child(3) p::before{
+    content: "";
+    display: inline-block;
+    border-top: 10px solid #E24444;
+    border-right: 10px solid transparent;
+    border-bottom: 0 solid blue;
+    border-left: 10px solid transparent;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+div.shipmentTracking div.leftTracking div:nth-child(3) p::after{
+    content: "";
+    display: inline-block;
+    border: 15px solid #116975;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%)
+}
+div.shipmentTracking div.rightTracking{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-left: 1px dashed black;
+    width: 35vw;
+}
+div.shipmentTracking div.rightTracking div{
+    margin-bottom: 20vh;
+    width: 100%;
+    text-align: center;
+}
+div.shipmentTracking div.rightTracking div:nth-child(2){
+    border-top: 1px dashed black;
+    position: relative;
+}
+div.shipmentTracking div.rightTracking div:nth-child(2) p::before{
+    content: "";
+    display: inline-block;
+    border-top: 10px solid #E24444;
+    border-right: 10px solid transparent;
+    border-bottom: 0 solid blue;
+    border-left: 10px solid transparent;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+div.shipmentTracking div.rightTracking div:nth-child(2) p::after{
+    content: "";
+    display: inline-block;
+    border: 15px solid #116975;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%)
+}
+div.shipmentTracking div.rightTracking div:nth-child(4){
+    border-top: 1px dashed black;
+    position: relative;
+}
+div.shipmentTracking div.rightTracking div:nth-child(4) p::before{
+    content: "";
+    display: inline-block;
+    border-top: 10px solid #E24444;
+    border-right: 10px solid transparent;
+    border-bottom: 0 solid blue;
+    border-left: 10px solid transparent;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation-name: triangeleFlash;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+div.shipmentTracking div.rightTracking div:nth-child(4) p::after{
+    content: "";
+    display: inline-block;
+    border: 15px solid #116975;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    animation-name: ballFlash;
+    animation-duration: .5s;
+    animation-iteration-count: infinite;
+}
+/* 以下是動畫效果 */
+@keyframes ballFlash{
+    0%{
+        border: 15px solid #116975;
+    }
+    100%{
+        border: 20px solid #E24444;
+    }
+}
+@keyframes triangeleFlash{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 5px;
+    }
+}
+

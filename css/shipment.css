@@ -1,0 +1,326 @@
+div.accountContainer{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin:0 auto;
+}
+
+/* table */
+div.accountContainer table.cart{
+    width: 100%;
+    margin: 1% auto;
+    border-collapse: collapse;
+}
+div.accountContainer table.cart tr th{
+    border-bottom: 1px dashed #116975;
+}
+div.accountContainer table.cart tr td{
+    text-align: center;
+    padding: 10px 0;
+}
+div.accountContainer table.cart tr:last-child{
+    border-top: 1px dashed #116975;
+}
+div.accountContainer table.cart tr:last-child td:nth-child(2){
+    font-weight: bold;
+}
+div.accountContainer table tr:last-child td:nth-child(3){
+    font-weight: bold;
+    color: #E24444;
+}
+.productsImg{
+    width: 50px;
+    height: 50px;
+}
+
+/* form_shipment */
+div.accountContainer form{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+div.accountContainer form label{
+    font-weight: 500;
+}
+div.accountContainer form p.shipTitle {
+    font-size: 28px;
+    color: #116975;
+    font-weight: bold;
+}
+div.accountContainer form div.shipMethodsContainer{
+    display: flex;
+    flex-direction: column;
+    transition: all .5s;
+}
+div.accountContainer form div.shipMethodsContainer div.shipMethods{
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+div.accountContainer form div.shipMethodsContainer div.shipMethods label {
+    font-weight: bold;
+    font-size: 18px;
+    color: #116975;
+}
+div.accountContainer form div.shipMethodsContainer div.shipMethods button.quickInput {
+    width: 80px;
+    background-color: #116975;
+    border: 1px solid #116975;
+    border-radius: 50px;
+    color: white;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 10px;
+    transition: all 1s;
+}
+div.accountContainer form div.shipMethodsContainer div.shipMethods button.quickInput:hover {
+    background-color: #bdb000;
+    border: 1px solid #bdb000;
+    transform: translateY(-2px);
+}
+div.accountContainer form div.shipMethodsContainer div.shipMethods div.dolar p {
+    margin: 0;
+    margin-right: 4.2vw;
+    color: #E24444;
+}
+/* Direct shipping */
+div.directShipping{
+    width: 80%;
+    margin: 1% 0;
+    margin-left: 5%;
+    display: flex;
+    align-items: center;
+}
+div.directShipping div.direcrLeft input{
+    margin: 1% 0; 
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+    border: 2px solid #116975;
+    transition: all .5s;
+    color: #bdb000;
+}
+div.directShipping div.direcrLeft input:focus{
+    background-color: #f5f5f5;
+}
+div.directShipping div.direcrLeft input::placeholder{
+    color: #b9b9b9;
+}
+div.directShipping div.direcrLeft textarea{
+    margin: 1% 0; 
+    width: 100%;
+    height: 100px;
+    resize: none;
+    border:2px solid #116975;
+    border-radius: 5px;
+    outline: none;
+    color: #bdb000;
+}
+div.directShipping div.direcrLeft textarea:focus{
+    background-color: #f5f5f5;
+}
+div.directShipping div.direcrLeft textarea::placeholder{
+    color: #b9b9b9;
+}
+div.directShipping div.direcrRight img{
+    width: 80%;
+    transform: translateX(25%);
+}
+
+/* Drap shipping */
+div.storeInfo {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: 1% 0;
+    margin-left: 5%;
+    align-items: center;
+}
+div.storeInfo div.storeLeft{
+    width: 100%;
+}
+div.storeInfo div.storeLeft div{
+    margin: 1% 0; 
+}
+div.storeInfo div.storeLeft input{
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+    border: 2px solid #116975;
+    transition: all 1s;
+    color: #bdb000;
+}
+div.storeInfo div.storeLeft input::placeholder{
+    color: #b9b9b9;
+}
+div.storeInfo div.storeLeft input:focus{
+    background-color: #f5f5f5;
+}
+div.storeInfo div.storeLeft div input{
+    width: 20px;
+}
+div.storeInfo div.storeLeft div a{
+    background-color: #11697550;
+    color: white;
+    font-size: 8px;
+    vertical-align: super;
+    border-radius: 5px;
+}
+div.storeInfo div.storeRight{
+    width: 65%;
+}
+div.storeInfo div.storeRight img{
+    width: 55%;
+    transform: translateX(80%);
+}
+/* shipTable */
+table.shipTable{
+    width: 70vw;
+    margin: 1% auto;
+    border-collapse: collapse;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 2vw;
+}
+table.shipTable tr{
+    border-bottom: 1px dashed #116975;
+    padding-left: 1vw;
+}
+table.shipTable tr:nth-child(4){
+    border-bottom: none;
+}
+table.shipTable tr:nth-child(5){
+    border-bottom: none;
+}
+table.shipTable tr td{
+    padding: 1vw 0;
+}
+table.shipTable tr td:nth-child(1){
+    padding-right: 5vw;
+    text-align: end;
+}
+table.shipTable tr td:nth-child(2){
+    text-align: center;
+}
+table.shipTable tr:nth-child(3) td:nth-child(1){
+    font-weight: bold;
+} 
+table.shipTable tr:nth-child(3) td:nth-child(2){
+    font-weight: bold;
+    color: #E24444;
+    text-decoration: underline;
+} 
+table.shipTable tr td button#submitA{
+    background-color: #bdb000;
+    border: 1px solid #bdb000;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: all 1s;
+    color: white;
+}
+table.shipTable tr td button#submitA:hover{
+    background-color: #E24444;
+    border: 1px solid #E24444;
+    cursor: pointer;
+    transform: translateY(-1px);
+}
+button#couponClick{
+    background-color: #116975;
+    border: 1px solid #116975;
+    border-radius: 50px;
+    color: white;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 10px;
+    transition: all 1s;
+}
+button#couponClick:hover{
+    background-color: #bdb000;
+    border: 1px solid #bdb000;
+    transform: translateY(-2px);
+}
+
+input#enterCoupon{
+    border: 1px solid #b9b9b9;
+    text-align: center;
+}
+
+
+
+
+@media (max-width:768px) {
+    div.accountContainer{
+        width: 90%;
+    }
+    div.accountContainer table.cart{
+        width: 90%;
+    }
+    div.accountContainer table.cart tr td{
+        padding: 3vw 0;
+    }
+    div.accountContainer form{
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+    }
+    div.accountContainer form p.shipTitle {
+        font-size: 24px;
+    }
+    div.accountContainer form div.shipMethodsContainer div.userInfo div.userDetail{
+        flex-direction: column;
+    }
+    div.accountContainer form div.shipMethodsContainer div.userInfo div.userDetail div{
+        flex-direction: row;
+    }
+    /* Drap shipping */
+    div.storeInfo div.storeLeft div a{
+        font-size: 10px;
+    }
+}
+@media (max-width:576px){
+    div.accountContainer form p.shipTitle {
+        font-size: 20px;
+    }
+}
+@media (max-width:420px){
+    div.accountContainer{
+        width: 100%;
+    }
+    div.accountContainer form p.shipTitle {
+        font-size: 16px;
+    }
+    /* table */
+    div.accountContainer table.cart{
+        font-size: 12px;
+    }
+    div.directShipping div.direcrRight img{
+        transform: translateX(35%);
+    }
+    div.storeInfo div.storeLeft div{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    div.storeInfo div.storeRight{
+        width: 45%;
+    }
+    div.accountContainer form label{
+        font-weight: normal;
+        font-size: 12px;
+    }
+    div.accountContainer form div.shipMethodsContainer div.shipMethods div.dolar p {
+        font-size: 12px;
+    }
+    div.accountContainer form div.shipMethodsContainer div.shipMethods label {
+        font-weight: bold;
+        font-size: 14px;
+        color: #116975;
+    }
+    div.directShipping div.direcrLeft input{
+       font-size: 12px;
+    }
+    div.storeInfo div.storeLeft input{
+        font-size: 12px;
+    }
+}

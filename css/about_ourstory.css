@@ -1,0 +1,86 @@
+div.about {
+    display: flex;
+    justify-content: center;
+    margin-top: 1%;
+    position: relative;
+}
+div.about img {
+    width: 80vw;
+    opacity: 0.7;
+}
+
+/* textContent in img */
+div.textContent{
+    position: absolute;
+    bottom:0;
+    left: 0;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+div.textContent h1.title{
+    color: white;
+    font-size: 7vw;
+    margin-left: 2%;
+    margin-bottom: 0;
+}
+div.textContent h2.letters{
+    color: black;
+    font-size: 3vw;
+    margin-top: 0;
+    margin-left: 1vw;
+}
+
+/* letter in paperContainer  */
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+div.papaerContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+div.papaerText{
+    padding: 0 10%;
+}
+div.papaerText h1{
+    font-size: 2vw;
+    color: #116975;
+}
+div.papaerText p{
+    font-size: 1.4vw;
+}
+div.papaerText p::selection{
+    background: #E24444;
+    color: white;
+}
+@media (max-width:600px) {
+    div.textContent h1.title{
+        margin-left: 4vw;
+    }
+    div.textContent h2.letters{
+        margin-left: 4vw;
+    }
+
+    div.about img {
+        width: 100vw;
+        height: 50vw;
+    }
+    div.papaerText{
+        padding: 2% 5%;
+    }
+    div.papaerText h1{
+        font-size: 5vw;
+        color: #116975;
+    }
+    div.papaerText p{
+        font-size: 3vw;
+    }
+    div.papaerText p::selection{
+        background: #E24444;
+        color: white;
+    }
+}

@@ -1,0 +1,553 @@
+@import url(../css/contact.css);
+@import url(../css/about.css);
+/* Each　h2.imgTitle SETTING*/
+h2.imgTitle{
+    margin: 3% 5%;
+    border-bottom: 1px dashed #116975;
+    transition: all .5s;
+}
+h2.imgTitle:hover{
+    color: #E24444;
+    transform: translateY(-2px);
+}
+
+h2.imgTitle img{
+    width: 50px;
+    margin-right: 1%;
+}
+
+/* banner */
+div.main_banner{
+    width: 100%;
+    position: relative;
+}
+div.main_banner img {
+    width: 100%;
+}
+div.main_banner div.textContent{
+    background-color: #ffffff30;
+    border-radius: 30px;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    width: 35vw;
+    text-align: end;
+    padding-right: 1.5%;
+    padding-bottom: 20px;
+    transition: all 1s;
+}
+div.main_banner div.textContent:hover{
+    transform: translateY(-55%);
+    animation-duration: 1s;
+}
+div.main_banner div.textContent a{
+    color: white;
+}
+div.main_banner div.textContent h1.title{
+    color: #116975;
+    font-size: 4.2vw;
+    margin-top: 2%;
+    margin-bottom: 0;
+}
+div.main_banner div.textContent h2.letters{
+    color: white;
+    font-size: 2vw;
+    margin-left: 0;
+}
+div.main_banner div.textContent button{
+    color: white;
+    width: 20vw;
+    height: 6vh;
+    font-weight: bold;
+    font-size: 1.5vw;
+    margin-left: 0;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 0;
+    outline: none;
+}
+div.main_banner div.textContent button:hover{
+    background-color: #E24444;
+}
+
+/* main_products */
+div.main_products{
+    margin: 5% auto;
+}
+div.productShow{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+div.productShow div.productImg{
+    background-image: url(../img/photos/index/pswitch/1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 40vw;
+    height: 35vw;
+    margin-right: 5vw;
+}
+div.productShow div.productDetail{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5vw;
+    margin-right: 2vw;
+    width: 25vw;
+}
+div.productShow div.productDetail p{
+    font-size: 1.5vw;
+    font-weight: bold;
+    color: #E24444;
+    margin: 0;
+}
+div.productShow div.productDetail h1{
+    margin: 0;
+    font-size: 4.5vw;
+    font-weight: bold;
+    color: #116975;
+}
+div.productShow div.productDetail h3{
+    margin: 0;
+    font-size: 3.5vw;
+    font-weight: bold;
+    color: #444444;
+    margin-bottom: 4vw;
+}
+div.productShow div.productDetail a button{
+    width: 100%;
+    cursor: pointer;
+    background-color: #116975;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    margin: 0 3vw;
+    height: 4vw;
+    width: 20vw;
+    font-weight: bold;
+    transition: all 1s;
+    font-size: 1.5vw;
+}
+div.productShow div.productDetail a button:hover{
+    background-color: #E24444;
+    transform: translateY(-2px);
+}
+div.productShow div.productState{
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color:  #e9e9e9e7;
+    border-radius: 10px;
+    padding: 1vw;
+}
+div.productShow div.productState h3{
+    margin: 0;
+    font-size: 3vw;
+    color: #116975;
+    font-weight: bold;
+}
+div.productShow div.productState p{
+    font-size: 2vw;
+    font-weight: bold;
+}
+div.productShow div.productState p.value{
+    margin: 0;
+    background-color: #E24444;
+    border-radius: 0 15px 15px 0;
+    padding: .4vw 0;
+    transition: all 1s;
+}
+div.productShow div.productState p#balance{
+    width: 80%;
+    color: #ffffff;
+    font-size: 1.3vw;
+}
+div.productShow div.productState p#speed{
+    width: 100%;
+    color: #ffffff;
+    font-size: 1.3vw;
+}
+div.productShow div.productState p#comfort{
+    width: 50%;
+    color: #ffffff;
+    font-size: 1.3vw;
+}
+
+div.popular_products{
+    display: flex;
+    justify-content: start;
+    margin-left: 10%;
+}
+div.popular_products div{
+    width: 10vw;    
+    margin: -5vw 2vw;
+    transition: all 1s;
+    cursor: pointer;
+}
+div.popular_products div:hover{
+    transform: translateY(-10px);
+}
+
+div.popular_products div p{
+    color: #116975;
+    font-weight: bold;
+    margin: 2%;
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+div.popular_products div a img {
+    width: 100%;
+}
+
+/* about */
+div.main_card{
+    display: flex;
+    flex-direction: column;
+    margin: 5% auto;
+}
+
+/* hot_news */
+div.main_news{
+    margin: 5% auto;
+}
+div.hot_news{
+    display: flex;
+    justify-content: center;
+}
+
+div.hot_news table{
+    width: 80%;
+    border-spacing: 5vw 10vw;
+    border-collapse: collapse;
+    font-size: 18px;
+}
+div.hot_news table tr{
+    height: 4vw;
+    border-bottom: 1px dashed #a7a7a7;
+}
+
+div.hot_news table tr:first-child{
+    border-bottom: none;
+}
+
+div.hot_news table tr:first-child th:last-child img{
+    width: 1.6vw;
+    height: 1.6vw;
+    margin-top: 8px;
+}
+div.hot_news table, tr ,td{
+    border-left: none;
+    border-right: none;
+    font-weight:400;
+}
+div.hot_news table tr:hover{
+    background-color: #E24444;
+    color: white;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+div.hot_news table tr:nth-child(1):hover{
+    cursor:inherit;
+}
+
+div.hot_news table tr th{
+    color: white;
+    background-color: #116975;
+    font-size: 18px;
+}
+div.hot_news table tr th:nth-child(2){
+    width: 150px;;
+}
+div.hot_news table tr td{
+    text-align: center;
+}
+
+div.hot_news table tr td:nth-child(3){
+    text-align: start;
+}
+/* contact */
+div.main_contact{
+    margin: 5% auto;
+}
+div.guestBookFooter{
+    display: flex;
+    justify-content: center;
+}
+div.guestBookFooter a{
+    margin-bottom: 1vw;
+    color: white;
+    transition: all 1s;
+}
+div.guestBookFooter a:hover{
+    transform: translateY(-2px);
+    color: #E24444;
+}
+div.guestBook h2:hover{
+    transform: translateY(0);
+}
+
+/* RWD */
+@media (max-width:768px){
+    /* banner */
+    div.main_banner div.textContent{
+        background-color: #ffffff00;
+        right: 3%;
+        width: 40%;
+        text-align: start;
+        padding-bottom: 2%;
+    }
+    div.main_banner div.textContent h1.title{
+        font-size: 28px;
+        margin-top: 2px;
+        margin-bottom: 0;
+    }
+    div.main_banner div.textContent h2.letters{
+        color: #00000080;
+        font-size: 18px;
+        margin-top: 1%;
+        margin-bottom: 0;
+    }
+    div.main_banner div.textContent button{
+        display: none;
+    }
+    /* main_products */
+    div.productShow{
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    div.productShow div.productImg{
+        width: 35%;
+        margin-left: 10%;
+    }
+    div.productShow div.productDetail{
+        align-self: flex-start;
+        margin-top: -8%;
+        margin-left: 12%;
+        width: 40%;
+    }
+    div.productShow div.productDetail p{
+        font-size: 16px;
+    }
+    div.productShow div.productDetail h1{
+        font-size: 36px;
+    }
+    div.productShow div.productDetail h3{
+        font-size: 28px;
+        margin: 2%;
+    }
+    div.productShow div.productDetail a button{
+        width: 80%;
+        font-size: 3vw;
+        margin: 1% 0;
+        border-radius: 100px;
+        height: 35px;
+    }
+    div.productShow div.productState{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 40%;
+        margin:2% 2%;
+        margin-right: 8%;
+    }
+    div.productShow div.productState h3{
+        font-size: 32px;
+    }
+    div.productShow div.productState p{
+        font-size: 24px;
+        margin: 18px 0;
+    }
+    div.productShow div.productState p#balance{
+        font-size: 16px;
+    }
+    div.productShow div.productState p#speed{
+        font-size: 16px;
+    }
+    div.productShow div.productState p#comfort{
+        font-size: 16px;
+    }
+    div.popular_products{
+        margin: 0 auto;
+        margin-top: 80px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    div.popular_products div{
+        width: 20%;    
+    }
+    div.popular_products div p{
+        color: #116975;
+        font-weight: bold;
+        text-align: center;
+        font-size: 12px;
+    }
+
+    div.popular_products div a img {
+        width: 100%;
+    }
+    /* hot_news */
+    div.hot_news table{
+        width: 90vw;
+        font-size: 16px;
+    }
+    div.hot_news table tr:first-child th:last-child img{
+        width: 4vw;
+        height: 4vw;
+        margin-top: 3px;
+    }
+    div.hot_news table, tr ,td{
+        border-left: none;
+        border-right: none;
+        font-weight:400;
+    }
+    div.hot_news table tr th{
+        color: white;
+        background-color: #116975;
+        font-size: 16px;
+    }
+    div.hot_news table tr th:nth-child(2){
+        width: 90px;
+    }
+    /* contact */
+    
+
+
+    p#ttttt::after{
+        width: 25px;
+        height: 25px;
+        top: 0;
+        right: 5%;
+    }
+}
+@media (max-width:576px){
+    div.main_banner div.textContent{
+        right: 0;
+        width: 47%;
+    }
+    div.main_banner div.textContent h1.title{
+        font-size: 20px;
+    }
+    div.main_banner div.textContent h2.letters{
+        font-size: 14px;
+    }
+    div.productShow div.productDetail{
+        margin-left: 12%;
+    }
+    div.productShow div.productDetail p{
+        font-size: 12px;
+    }
+    div.productShow div.productDetail h1{
+        font-size: 28px;
+    }
+    div.productShow div.productDetail h3{
+        font-size: 24px;
+    }
+    div.productShow div.productState{
+        padding: 2px 10px;
+    }
+    div.productShow div.productState h3{
+        font-size: 20px;
+    }
+    div.productShow div.productState p{
+        font-size: 16px;
+        margin: 18px 0;
+    }
+    div.productShow div.productState p#balance{
+        font-size: 16px;
+    }
+    div.productShow div.productState p#speed{
+        font-size: 16px;
+    }
+    div.productShow div.productState p#comfort{
+        font-size: 16px;
+    }
+    div.popular_products{
+        margin: 0 auto;
+        margin-top: 80px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    div.hot_news table tr {
+        line-height: 20px;
+    }
+    div.hot_news table tr:first-child th:nth-child(1), th:nth-child(2){
+        display: none;
+    }
+    div.hot_news table tr td:nth-child(1), td:nth-child(2){
+        display: none;
+    }   
+}
+@media (max-width:360px){
+    div.main_banner div.textContent{
+        padding-left: 14px;
+    }
+    div.main_banner div.textContent h1.title{
+        font-size: 14px;
+    }
+    div.main_banner div.textContent h2.letters{
+        font-size: 10px;
+    }
+    div.productShow div.productDetail p{
+        display: none;
+    }
+    div.productShow div.productDetail h1{
+        font-size: 20px;
+    }
+    div.productShow div.productDetail h3{
+        font-size: 18px;
+    }
+    div.productShow div.productDetail a button{
+        font-size: 12px;
+        height: 20px;
+        width: 90px;
+    }
+    div.productShow div.productState{
+        padding: 10px 10px;
+    }
+    div.productShow div.productState h3{
+        font-size: 14px;
+    }
+    div.productShow div.productState p{
+        font-size: 12px;
+        margin: 6px 0;
+    }
+    div.productShow div.productState p#balance{
+        font-size: 10px;
+        height: 16px;
+    }
+    div.productShow div.productState p#speed{
+        font-size: 10px;
+        height: 16px;
+    }
+    div.productShow div.productState p#comfort{
+        font-size: 10px;
+        height: 16px;
+    }
+    div.popular_products{
+        margin: 0 auto;
+        margin-top: 40px;
+        justify-content: space-between;
+    }
+    div.popular_products div{
+        width: 200px;
+    }
+    div.popular_products div p{
+        font-size: 8px;
+    }
+    div.hot_news table tr th{
+        font-size: 14px;
+    }
+    div.hot_news table tr td{
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,394 @@
+div.container{
+    overflow: hidden;
+}
+div.signInUpContainer{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 2% auto;
+    position: relative;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+/* sign In & sign Up */
+
+/* sign In */
+div.signInUp div.signIn{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    /* 遮罩開關 */
+    z-index: 11;
+}
+div.signInUp div.signIn p:nth-child(1){
+    font-size: 28px;
+    font-weight: bold;
+}
+div.signInUp div.signIn div.social{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+div.signInUp div.signIn div.social a{
+    margin: 0 15px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+    border: 1px solid black;
+}
+div.signInUp div.signIn div.social a:nth-child(1){
+    background-image: url(../img/logInUp_icon/facebook.png);
+}
+div.signInUp div.signIn div.social a:nth-child(2){
+    background-image: url(../img/logInUp_icon/google-glass-logo.png);
+}
+div.signInUp div.signIn div.social a:nth-child(3){
+    background-image: url(../img/logInUp_icon/twitter.png);
+}
+
+div.signInUp div.signIn form{
+    display: flex;
+    flex-direction: column;
+}
+div.signInUp div.signIn form input{
+    width: 250px;
+    margin-top: 15px;
+    border: 2px solid #116975;
+    border-radius: 50px;
+    outline: none;
+    font-weight: bold;
+    transition: all .5s;
+    color: #bdb000;
+}
+div.signInUp div.signIn form input:focus{
+    background-color: #ececec;
+}
+div.signInUp div.signIn form a{
+    text-align: center;
+    align-self: center;
+    margin-top: 2px;
+    margin-bottom: 10px;
+    color: #116975;
+    font-weight: bold;
+    font-size: 12px;
+}
+div.signInUp div.signIn form button{
+    width: 200px;
+    height: 30px;
+    align-self: center;
+    background-color: white;
+    border: 2px solid #116975;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: all 1s;
+}
+div.signInUp div.signIn form button:hover{
+    cursor: pointer;
+    background-color: #E24444;
+    border: 2px solid #E24444;
+    color: white;
+}
+
+/* sign Up */
+div.signInUpContainer div.signInUp {
+    display: flex;
+    width: 100%;
+}
+div.signInUp div.signUp{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    /* 遮罩開關 */
+    z-index: -11;
+}
+div.signInUp div.signUp div.signUpUp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+div.signInUp div.signUp div.signUpUp p{
+    font-size: 18px;
+    text-align: center;
+    transition: all .5s;
+}
+div.signInUp div.signUp div.signUpUp p:first-child{
+    font-size: 28px;
+    font-weight: bold;
+}
+div.signInUp div.signUp div.social{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+div.signInUp div.signUp div.social a{
+    margin: 0 15px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+    border: 1px solid black;
+}
+div.signInUp div.signUp div.social a:nth-child(1){
+    background-image: url(../img/logInUp_icon/facebook.png);
+}
+div.signInUp div.signUp div.social a:nth-child(2){
+    background-image: url(../img/logInUp_icon/google-glass-logo.png);
+}
+div.signInUp div.signUp div.social a:nth-child(3){
+    background-image: url(../img/logInUp_icon/twitter.png);
+}
+div.signInUp div.signUp form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+div.signInUp div.signUp form input{
+    width: 250px;
+    margin-bottom: 15px;
+    border: 2px solid #116975;
+    border-radius: 50px;
+    outline: none;
+    font-weight: bold;
+    transition: all .5s;
+    color: #bdb000;
+}
+div.signInUp div.signUp form input:focus{
+    background-color: #ececec;
+}
+div.signInUp div.signUp form button{
+    width: 200px;
+    height: 30px;
+    align-self: center;
+    background-color: white;
+    border: 2px solid #116975;
+    border-radius: 30px;
+    margin-bottom: 2vw;
+    font-weight: bold;
+}
+div.signInUp div.signUp form button:hover{
+    cursor: pointer;
+    background-color: #E24444;
+    border: 2px solid #E24444;
+    color: white;
+    transition: all 1s;
+}
+
+/* mask */
+div.signInUpMask{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+/* left */
+div.signInUpMask div.signInPage{
+    width: 50%;
+    background-color: #116975;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* 遮罩開關 */
+    opacity: 0;
+    z-index: -11;
+    /* 動畫 */
+    /* animation-name: open; */
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+div.signInUpMask div.signInPage p {
+    color: white;
+    margin: 20px auto;
+}
+div.signInUpMask div.signInPage p:nth-child(1){
+    font-size: 40px;
+}
+div.signInUpMask div.signInPage p:nth-child(2){
+    font-size: 24px;
+    padding: 0 20px;
+    text-align: center;
+}
+div.signInUpMask div.signInPage button{
+    width: 150px;
+    height: 30px;
+    border-radius: 50px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 1s;
+    background-color: white;
+}
+div.signInUpMask div.signInPage button:hover{
+    background-color: #E24444;
+    color: white;
+    cursor: pointer;
+}
+/* right */
+div.signInUpMask div.signUpPage{
+    width: 50%;
+    background-color: #E24444;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* 動畫 */
+    /* animation-name: open; */
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+div.signInUpMask div.signUpPage p {
+    color: white;
+    margin: 20px auto;
+}
+div.signInUpMask div.signUpPage p:nth-child(1){
+    font-size: 40px;
+}
+div.signInUpMask div.signUpPage p:nth-child(2){
+    font-size: 24px;
+    padding: 0 20px;
+    text-align: center;
+}
+div.signInUpMask div.signUpPage button{
+    width: 150px;
+    height: 30px;
+    border-radius: 50px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 1s;
+    background-color: white;
+}
+div.signInUpMask div.signUpPage button:hover{
+    background-color: #116975;
+    color: white;
+    cursor: pointer;
+}
+
+@keyframes open{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+/* js & css */
+.alertOn{
+    color: #E24444;
+    font-weight: bold;
+}
+
+@media (max-width:768px){
+    div.signInUp{
+        flex-direction: column;
+        align-items: center;
+    }
+    div.signInUp div.signIn{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    div.signInUp div.signIn p{
+        margin: 25px auto;
+        text-align: center;
+    }
+    div.signInUp div.signIn form{
+        width: 100%;
+        align-items: center;
+    }
+    div.signInUp div.signIn form input{
+        width: 60%;
+        font-weight: bold;
+    }
+    div.signInUp div.signIn form a{
+        width: 100%;
+    }
+    div.signInUp div.signIn form button{
+        width: 40%;
+    }
+    /* signUp */
+    div.signInUp div.signUp{
+        width: 100%;
+        margin-top: 50px;
+    }
+    div.signInUp div.signUp div.signUpUp p{
+        width: 100%;
+    }
+    div.signInUp div.signUp form input{
+        width: 60%;
+        font-weight: bold;
+        margin: 10px auto;
+    }
+    div.signInUp div.signUp form button{
+        width: 40%;
+    }
+    /* Mask */
+    div.signInUpMask{
+        flex-direction: column;
+        margin: 0 auto;
+        width: 100%;
+    }
+    /* Sign In */
+    div.signInUpMask div.signInPage{
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        padding-top: 0;
+    }
+    div.signInUpMask div.signInPage p:nth-child(1){
+        font-size: 38px;
+    }
+    div.signInUpMask div.signInPage p:nth-child(2){
+        font-size: 20px;
+    }
+    /* Sign Up */
+    div.signInUpMask div.signUpPage{
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        padding-top: 0;
+    }
+    div.signInUpMask div.signUpPage p:nth-child(1){
+        font-size: 38px;
+        margin: 0;
+    }
+    div.signInUpMask div.signUpPage p:nth-child(2){
+        font-size: 20px;
+    }
+}
+@media (max-width: 360px) {
+    /* Mask */
+    /* Sign In */
+    div.signInUpMask div.signInPage p:nth-child(1){
+        font-size: 32px;
+    }
+    div.signInUpMask div.signInPage p:nth-child(2){
+        font-size: 18px;
+    }
+    div.signInUpMask div.signInPage button{
+        font-size: 14px;
+    }
+    /* Sign Up */
+    div.signInUpMask div.signUpPage p:nth-child(1){
+        font-size: 32px;
+    }
+    div.signInUpMask div.signUpPage p:nth-child(2){
+        font-size: 18px;
+    }
+    div.signInUpMask div.signUpPage p:nth-child(1){
+        font-size: 32px;
+    }
+    div.signInUpMask div.signUpPage button{
+        font-size: 14px;
+    }
+}

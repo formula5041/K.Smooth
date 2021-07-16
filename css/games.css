@@ -1,0 +1,229 @@
+* {
+    -moz-user-select: none;
+    -o-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+div.gamesContainer{
+    width: 800px;
+    margin: 1% auto;
+    border: 1px solid #116975;
+    background-color: #116975;
+    border-radius: 30px;
+    height: 550px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+div.gamesContainer h1.title{
+    color: #ddff00;
+    margin: 0;
+}
+div.gamesContainer h2.info{
+    color: white;
+    margin-bottom: 4px;
+    margin-top: 10px;
+}
+div.gamesContainer span.control{
+    color: #ffffff;
+}
+div.gamesContainer div.countArea{
+    position: absolute;
+    right:10px;
+    top: 170px;
+    width: 150px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: all 1s;
+}
+div.gamesContainer div.countArea h4{
+    margin: 5px;
+    text-align: center;
+    background-color: #c9c23a;
+    border-radius: 10px;
+}
+div.gamesContainer div.countArea span{
+    margin: 2px;
+    font-size: 14px;
+    font-weight: bold;
+}
+div.gamesContainer div.playZone{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div.gamesContainer div.playZone div.moveButton{
+    margin-top: 50px;
+    height: 80px;
+    width: 150px;
+    margin-right: 20px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+div.gamesContainer div.playZone div.moveButton button{
+    width: 40px;
+    height: 40px;
+    border: 2px solid #242323;
+    color: white;
+    background-color: #E24444;
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 4px;
+    cursor: pointer;
+    transition: all .5s;
+}
+div.gamesContainer div.playZone div.moveButton button:hover{
+    background-color: #242323;
+}
+button.n{
+    visibility: hidden;
+}
+div.gamesContainer div.playZone div.playArea{
+    border-radius: 10px;
+    background-color: white;
+    width: 500px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    position: relative;
+    margin-top: 20px;
+    margin-right: 40px;
+}
+div.gamesContainer div.playZone div.playArea div#playButton{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 350px;
+    height: 200px;
+    border-radius: 20px;
+    font-size: 80px;
+    font-weight: bold;
+    background-color: #c9c23a;
+    border: 5px solid #303030;
+    color: #303030;
+    transition: all 1s;
+    cursor: pointer;
+}
+div.gamesContainer div.playZone div.playArea div#playButton:hover{
+    background-color: #E24444;
+    color: white;
+}
+div.gamesContainer div.playZone div.playArea div#playButton p{
+    font-size: 24px;
+    margin-top: 10px;
+    text-align: start;
+    margin-left: 15px;
+    margin-bottom: -50px;
+    color: white;
+}
+div.gamesContainer div.playZone div.playArea div#playButton div.checkArea button {
+    cursor: pointer;
+    background-color: #116975;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    width: 60px;
+    height: 30px;
+    font-weight: bold;
+    transition: all .5s;
+}
+div.gamesContainer div.playZone div.playArea div#playButton div.checkArea button:hover{
+    transform: translateY(-2px);
+}
+
+/* coupon */
+div.gamesContainer div.playZone div.playArea div.couponGame{
+    background-color: #c9c23a;
+    width: 80px;
+    height: 30px;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    border: 1px dashed black;
+    position: absolute;
+    padding-left: 12px;
+    padding-top: 2px;
+    top: 10px;
+    left: 300px;
+    transition: all 1s;
+    animation-name: couponMove;
+    animation-duration: 2s;
+    animation-fill-mode: backwards;
+    animation-iteration-count: infinite;
+    
+}
+div.gamesContainer div.playZone div.playArea div.couponGame:nth-child(2){
+    top: 110px;
+    left: 220px;
+}
+div.gamesContainer div.playZone div.playArea div.couponGame:nth-child(3){
+    top: 220px;
+    left: 100px;
+}
+div.gamesContainer div.playZone div.playArea div.couponGame:nth-child(4){
+    top: 280px;
+    left: 350px;
+}
+div.gamesContainer div.playZone div.playArea img#kangarooGame{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    z-index: 1;
+}
+@keyframes getCoupon{
+    30%{
+        transform: scaleX(-1);
+    }
+    60%{
+        transform: translateY(-10px);
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes couponMove{
+    50%{
+        transform: translateX(-4px);
+    }
+}
+
+div.gamesContainer div.playZone div.abButton{
+    margin-top: 50px;
+    height: 80px;
+    width: 100px;
+    margin-right: 20px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+div.gamesContainer div.playZone div.abButton button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    border: 2px solid #242323;
+    color: white;
+    background-color: #E24444;
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 4px;
+    cursor: pointer;
+}
+div.gamesContainer div.playZone div.abButton button:hover{
+    background-color:#c9c23a;
+}
+div.gamesContainer div.playZone div.abButton button#i{
+   transform: translateY(10px);
+}

@@ -1,0 +1,179 @@
+div.location{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2% auto;
+}
+/* address */
+div.address{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+div.addressContent{
+    width: 100%;
+    background-color: #116975;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+div.addressContent h1 {
+    border-bottom: 1px solid white;
+    font-weight: bold;
+    text-align: center;
+}
+div.addressContent p {
+    margin-left: 10px;
+    font-size: 16px;
+}
+div.address img{
+    width: 65%;
+}
+@media (max-width: 1000px) {
+    div.address img{
+        display: none;
+    }
+}
+
+/* map */
+div.map{
+    display: flex;
+    width: 100%;
+}
+div.map div.mapContent{
+    width: 100%;
+}
+div.map div.mapContent iframe{
+    width:100%;
+    height: 100%;
+    border: none;
+}
+/* opening hours */
+div.openingHours{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: #E24444;
+}
+div.openingHours h1{
+    text-align: center;
+    margin: 0;
+    padding: 3% 0;
+    border-bottom: 1px solid white;
+}
+div.openingInfo{
+    margin: auto 0;
+    display: flex;
+    justify-content: center;
+}
+div.openingHours p {
+    text-align: center;
+    font-size: 16px;
+}
+div.openingHours div.openingInfo h2 {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    margin: 1% 0;
+    color: white;
+}
+div.openingHours div.openingInfo p {
+    font-size: 8px;
+}
+div.openingHours div.openingInfo div p {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin: 1% 0;
+    font-size: 14px;
+}
+
+
+/* 手機RWD */
+
+@media (max-width:768px) {
+    div.location{
+        width: 100%;
+        margin-top: 2%;
+    }
+    /* address */
+    div.address{
+        flex-direction: column;
+        width: 100%;
+    }
+    div.addressContent p {
+        margin: 2% 5%;
+    }
+    div.address img{
+        width: 100%;
+        display: inline-block;
+    }
+    /* map */
+    div.map{
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+    /* opening hours */
+    div.openingHours{
+        padding-bottom: 5px;
+    }
+    div.openingHours h1{
+        padding-bottom: 0;
+        
+    }
+    div.openingInfo{
+        display: flex;
+        align-items: baseline;
+        margin-top: 10px;
+        margin-right: 2%;
+    }
+}
+@media (max-width:576px){
+    div.addressContent h1 {
+        font-size: 24px;
+    }
+    div.addressContent p {
+        font-size: 14px;
+    }
+    div.openingHours h1{
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    div.openingHours p{
+        font-size: 8px;
+    }
+    div.openingHours div.openingInfo div h2 {
+        font-size: 16px;
+    }
+    div.openingHours div.openingInfo div p {
+        font-size: 12px;
+    }
+}
+
+
+
+@media (max-width:360px){
+    div.addressContent h1 {
+        font-size: 20px;
+    }
+    div.addressContent p {
+        font-size: 12px;
+    }
+    div.openingHours h1{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    div.openingHours p{
+        font-size: 8px;
+    }
+    div.openingHours div.openingInfo div h2 {
+        font-size: 14px;
+    }
+    div.openingHours div.openingInfo div p {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In & Up</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/header_footer_sidebar.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/signin_up.css">
+</head>
+<body id="body">
+    <div class="container">
+        <header>
+            <div class="logo"><a href="./index.html"></a></div>
+            <div class="loginIcon">
+                <a href="./signin_up.html"><img src="./img/login.svg" id="carts"></a>
+                <a href="./account.html"><img src="./img/cart.svg" id="logs"></a>
+            </div>
+        </header>
+        <main>
+            <!-- hamburger -->
+            <label for="checkbox" id="hamOver"></label>
+            <input type="checkbox" id="checkbox">
+            <!-- nav -->
+            <div class="nav_content" id="nav_contents">
+                <!-- social -->
+                <a href="#"><div class="ig"></div></a>
+                <a href="#"><div class="twitter"></div></a>
+                <!-- search -->
+                <input type="text" placeholder=" Searching..." id="search">
+                <label for="search" class="search"></label>
+                <!-- list -->
+                <div class="nav_list">
+                    <a href="./news.html" class="news"><p>News</p></a>
+                    <a href="./about.html" class="about"><p>About</p></a>
+                    <a href="./products.html" class="products"><p>Products</p></a>
+                    <a href="./contact.html" class="contact"><p>Contact</p></a>
+                    <a href="./games.html" class="play"><p>Games</p></a>
+                    <a href="./account.html" class="account"><p>Account</p></a>
+                </div>
+            </div>
+            <div class="breadCrumbs">
+                <a href="./index.html" class="homeIcon"></a>
+                <a href="./signin_up.html">Sign In & Up</a>
+            </div>
+            <!-- signin_up -->
+            <div class="signInUpContainer">
+                <!-- signIn & Up -->
+                <div class="signInUp">
+                    <div class="signIn" id="l1_1">
+                        <p>Sign In</p>
+                        <div class="social">
+                            <a href="#"></a>
+                            <a href="#"></a>
+                            <a href="#"></a>
+                        </div>
+                        <p class="alertAreas">or use your account</p>
+                        <form action="#" method="GET" id="signInForm">
+                            <input type="email" name="email" placeholder="Email" required>
+                            <input type="password" name="password" placeholder="Password" required>
+                            <a href="#">*Forgot Password</a>
+                            <button type="submit" id="signIn">SIGN IN</button>
+                        </form>
+                    </div>
+                    <div class="signUp" id="l1_2">
+                        <div class="signUpUp">
+                            <p class="signUpTitle">Sign Up</p>
+                            <div class="social">
+                                <a href="#"></a>
+                                <a href="#"></a>
+                                <a href="#"></a>
+                            </div>
+                            <p class="alertArea">or use your email for registration</p>
+                        </div>
+                        <form action="#" method="GET" id="signUpForm">
+                            <input type="text" name="name" placeholder="Full Name" required>
+                            <input type="text" name="telephone" placeholder="Phone Number" maxlength="10" required>
+                            <input type="email" name="email" placeholder="Email" required>
+                            <input type="password" name="password" placeholder="Password" minlength="8" required>
+                            <button type="submit" id="signUp">SIGN UP</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- mask -->
+                <div class="signInUpMask">
+                    <div class="signInPage" id="l2_1">
+                        <p>Welcome Back!</p>
+                        <p>To keep connected with us please login with your personal info.</p>
+                        <button type="button" id="maskSignIn">SIGN IN</button>
+                    </div>
+                    <div class="signUpPage" id="l2_2">
+                        <p>Hi, Children!</p>
+                        <p>Enter your details and start the awesome journey with us.</p>
+                        <button type="button" id="maskSignUp">SIGN UP</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer_nav">
+                <a href="./news.html"><p>News</p></a>
+                <a href="./about.html"><p>About</p></a>
+                <a href="./products.html"><p>Products</p></a>
+                <a href="./contact.html"><p>Contact</p></a>
+                <a href="./games.html"><p>Games</p></a>
+                <a href="./account.html"><p>Account</p></a>
+            </div>
+            <div class="footer_social">
+                <a href="#"><p></p></a>
+                <a href="#"><p></p></a>
+                <a href="#"><p></p></a>
+                <a href="#"><p></p></a>
+            </div>
+            <div class="footer_signup">
+                <form action="#" method="GET">
+                    <button type="button"><a href="./index.html" style="color:white">BACK HOME</a></button>
+                </form>
+            </div>
+            <div class="footer_allRights">
+                <p id="ttttt"></p>
+                <p>K.Smooth® 2021 All Right reserved</p>
+            </div>
+        </footer>
+    </div>
+    <script src="./js/sidebar.js"></script>
+    <script src="./js/signinupmask.js"></script>
+    <script src="./js/scrolltotop.js"></script>
+    <script src="./js/useraccount.js"></script>
+</body>
+</html>

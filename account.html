@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/header_footer_sidebar.css">
+    <link rel="stylesheet" href="./css/account.css">
+</head>
+<body id="body">
+    <div class="container">
+        <header>
+            <div class="logo"><a href="./index.html"></a></div>
+            <div class="loginIcon">
+                <a href="./signin_up.html"><img src="./img/login.svg" id="carts"></a>
+                <a href="./account.html"><img src="./img/cart.svg" id="logs"></a>
+            </div>
+        </header>
+        <main>
+            <!-- hamburger -->
+            <label for="checkbox" id="hamOver"></label>
+            <input type="checkbox" id="checkbox">
+            <!-- nav -->
+            <div class="nav_content" id="nav_contents">
+                <!-- search -->
+                <input type="text" placeholder="Searching..." id="search">
+                <label for="search" class="search"></label>
+                <!-- list -->
+                <div class="nav_list">
+                    <a href="./news.html" class="news"><p>News</p></a>
+                    <a href="./about.html" class="about"><p>About</p></a>
+                    <a href="./products.html" class="products"><p>Products</p></a>
+                    <a href="./contact.html" class="contact"><p>Contact</p></a>
+                    <a href="./games.html" class="play"><p>Games</p></a>
+                    <a href="./account.html" class="account"><p>Account</p></a>
+                </div>
+            </div>
+            <!-- breadCrumbs -->
+            <div class="breadCrumbs">
+                <a href="./index.html" class="homeIcon"></a>
+                <a href="./account.html">Account</a>
+            </div>
+            <!-- account -->
+            <div class="accountContainer">
+                <div class="personalImg">
+                    <img src="./img/banner_1200x501.png" style="width:100%" class="imgBanner">
+                </div>
+                <div class="breakPage">
+                    <div class="myCart">
+                        <p id="cartBtn">My Cart</p>
+                    </div>
+                    <div class="shipment">
+                        <p id="shipmentBtn">Shipment</p>
+                    </div>
+                    <div class="history">
+                        <p id="historyBtn">History</p>
+                    </div>
+                </div>
+                <table class="cart" id="cart">
+                    <tr>
+                        <th></th>
+                        <th>ITEM NAME</th>
+                        <th>QUANTITY</th>
+                        <th>PRICE</th>
+                        <th>SUM</th>
+                        <th><img src="./img/trash.png" alt="trash" class="trash aBin"></th>
+                    </tr>
+                    <tr id="insertPoint">
+                        <td colspan="3"></td>
+                        <td>Total:</td>
+                        <td>$<span id="totalPrice"></span></td>
+                        <td></td>
+                    </tr>
+                    <tr >
+                        <td colspan="4"></td>
+                        <td><a href="./shipment.html"><button type="button" id="checkOut">Check Out</button></a></td>
+                        <td></td>
+                    </tr>
+                </table>
+                <div class="shipmentContainer" id="shipment">
+                    <p>Out For Delivery</p>
+                    <p>Expected delivery:Monday, June 8, 2021, by 9:00am</p>
+                    <div class="shipmentTracking">
+                        <div class="leftTracking">
+                            <div>
+                                <p>Shipping Soon</p>
+                                <img src="./img/shipment/shippingsoon.png" alt="shippingsoon">
+                            </div>
+                            <div></div>
+                            <div>
+                                <p>On The Way</p>
+                                <img src="./img/shipment/ontheway.png" alt="ontheway">
+                            </div>
+                            <div></div>
+                        </div>
+                        <div class="rightTracking">
+                            <div></div>
+                            <div>
+                                <p>Shipped</p>
+                                <img src="./img/shipment/shipped.png" alt="shipped">
+                            </div>
+                            <div></div>
+                            <div>
+                                <p>Delivered</p>
+                                <img src="./img/shipment/delivered.png" alt="delivered">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- history -->
+                <table class="history" id="history">
+                    
+                </table>
+            </div>
+        </main>
+        <footer>
+            <div class="footer_nav">
+                <a href="./news.html"><p>News</p></a>
+                <a href="./about.html"><p>About</p></a>
+                <a href="./products.html"><p>Products</p></a>
+                <a href="./contact.html"><p>Contact</p></a>
+                <a href="./games.html"><p>Games</p></a>
+                <a href="./account.html"><p>Account</p></a>
+            </div>
+            <div class="footer_social">
+                <a href="#"><p></p></a>
+                <a href="#"><p></p></a>
+                <a href="#"><p></p></a>
+                <a href="#"><p></p></a>
+            </div>
+            <div class="footer_signup">
+                <form action="#" method="GET">
+                    <button type="button"><a href="./signin_up.html" style="color:white">SIGN IN</a></button>
+                </form>
+            </div>
+            <div class="footer_allRights">
+                <p id="ttttt"></p>
+                <p>K.Smooth® 2021 All Right reserved</p>
+            </div>
+        </footer>
+    </div>
+    <script src="./js/sidebar.js"></script>
+    <script src="./js/account.js"></script>
+    <script src="./js/scrolltotop.js"></script>
+    <script src="./js/useraccount.js"></script>
+</body>
+</html>

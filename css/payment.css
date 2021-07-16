@@ -1,0 +1,265 @@
+div.container{
+  position: relative;
+}
+div.accountContainer{
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    margin:2% auto;
+}
+.productsImg{
+    width: 50px;
+    height: 50px;
+}
+
+/* purchasing details*/
+div.accountContainer table.cart{
+    width: 70vw;
+    margin: 1% auto;
+    border-collapse: collapse;
+}
+div.accountContainer table.cart tr th{
+    border-bottom: 1px dashed #116975;
+}
+div.accountContainer table.cart tr td{
+    text-align: center;
+    padding: 1vw 0;
+}
+
+div.accountContainer table.cart tr:last-child{
+    border-top: 1px dashed #116975;
+}
+div.accountContainer table tr:last-child td:nth-child(3){
+    font-weight: bold;
+}
+div.accountContainer table.cart tr:last-child td:nth-child(2){
+    font-weight: bold;
+}
+/* 單獨對最後一個總價做顏色調整 */
+.lastTotal{
+    color: #E24444;
+}
+#shipStyle{
+    font-weight: bold;
+}
+#shipdolarStyle{
+    font-weight: bold;
+    color: #E24444;
+}
+
+/* form_payment */
+form.formPayment{
+    width: 70vw;
+    margin: 0 auto;
+    margin-bottom: 2%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+form.formPayment div.left{
+    width: 45vw;
+}
+form.formPayment div.left h1{
+    color: #116975;
+}
+form.formPayment div.left label {
+    font-weight: bold;
+    color:#116975;
+}
+form.formPayment div.left label.checkBoxLabel {
+    font-weight: normal;
+}
+form.formPayment div.left label.labelVisa{
+    display: inline-block;
+    background-image: url(../img/visa.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+}
+form.formPayment div.left label.labelMaster{
+    display: inline-block;
+    background-image: url(../img/mastercard.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+}
+form.formPayment div.left input{
+    margin-top: 5%;
+    transition: all .5s;
+    border-radius: 15px;
+    outline: none;
+    border: 2px solid #116975;
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    letter-spacing: 2px;
+    text-align: center;
+    overflow: hidden;
+}
+form.formPayment div.left input.card{
+    width: 70px;
+}
+form.formPayment div.left input.securityCode{
+    width: 70px;
+}
+form.formPayment div.left input:focus{
+    background-color: #f5f5f5;
+}
+#cardNumber{
+    width: 210px;
+}
+#userNumber{
+    background-color: #11697560;
+    color: white;
+    border-radius: 50px;
+    border: none;
+    width: 230px;
+    padding: 5px 15px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 6px;
+
+}
+form.formPayment div.left div{
+    text-align: end;
+    margin-right: 5%;
+}
+form.formPayment div.left div button{
+    background-color: #bdb000;
+    color: #ffffff;
+    border: 1px solid #bdb000;
+    border-radius: 10px;
+    width: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 10px;
+    transition: all 1s;
+}
+form.formPayment div.left div button:hover{
+    background-color: #E24444;
+    border: 1px solid #E24444;
+    transform: translateY(-1px);
+}
+
+
+/* right */
+form.formPayment div.right{
+    border-radius:30px;
+    background-color: white;
+    border:2px solid #E24444;
+    padding: 1vh;
+    width: 30vw;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* animation */
+    animation-name: payNotice;
+    animation-duration: 1.2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-iteration-count: 3;
+}
+@keyframes payNotice{
+    0%{
+        transform: translateX(0);
+    }
+    10%{
+        transform: translateX(-10px);
+    }
+    20%{
+        transform: translateX(0);
+    }
+    30%{
+        transform: translateX(10px);
+    }
+    40%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(-10px);
+    }
+    60%{
+        transform: translateX(0);
+    }
+    70%{
+        transform: translateX(10px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+form.formPayment div.right h2 {
+    font-size: 1.4vw;
+    color: #E24444;
+    font-weight: bold;
+}
+form.formPayment div.right p {
+    font-size: 1.1vw;
+    color: #116975;
+    font-weight: bold;
+}
+
+
+/* RWD */
+@media (max-width:768px) {
+  div.accountContainer{
+    width: 100%;
+    margin: 0 auto;
+  }
+  div.accountContainer table.cart{
+    width: 90%;
+  }
+  form.formPayment{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3% 0;
+    width: 90%;
+}
+  form.formPayment div.left{
+    width: 100%;
+    order: 2;
+  }
+  form.formPayment div.left div{
+    text-align: center;
+  }
+  form.formPayment div.right{
+    width: 100%;
+    margin-top: 2%;
+  }
+  form.formPayment div.right h2 {
+    font-size: 3vw;
+  }
+  form.formPayment div.right p {
+    font-size: 2vw;
+  }
+  #pay{
+    margin-left: 10px;
+  }
+}
+@media (max-width:420px){
+    div.accountContainer table.cart{
+        font-size: 12px;
+    }
+    form.formPayment div.left h1{
+        font-size: 24px;
+    }
+    form.formPayment div.left h3{
+        font-size: 20px;
+    }
+    form.formPayment div.left label{
+        font-size: 12px;
+    }
+    #newWindow {
+        width: 100% !important;
+    }
+    #userNumber{
+        width: 260px;
+    }
+}
+
+
