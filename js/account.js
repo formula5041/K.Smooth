@@ -222,6 +222,7 @@ function guestFun(){
     passing();
     function passing(){
         for(let i = 0; i < productItem.length ; i++ ){
+            document.querySelectorAll('.itemsList')[i].setAttribute('data-id', i);
             document.querySelectorAll('.productsImg')[i].src=productItem[i].img;
             document.querySelectorAll('.productName')[i].innerHTML = productItem[i].name;
             document.querySelectorAll('.sumq')[i].innerHTML = productItem[i].quantity;
